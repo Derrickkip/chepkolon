@@ -1,0 +1,21 @@
+.PromosWrapper {
+    margin-top: 80px;
+    text-align: center;
+    width: 840px;
+}
+
+.PromosWrapperInner {
+
+}
+
+
+@media screen and (max-width: 767px) {
+    .PromosWrapper {
+        margin-top: 30px;
+        width: auto;
+    }
+
+    .PromosWrapperInner {
+        margin: 0 -20px;
+    }
+}

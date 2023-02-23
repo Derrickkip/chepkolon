@@ -1,0 +1,93 @@
+.PromoCard {
+    backface-visibility: hidden;
+    background: var(--off-light-green);
+    display: inline-block;
+    height: 260px;
+    margin: 0 19px 23px;
+    position: relative;
+    transform: scale(1);
+    width: 216px;
+}
+
+.PromoCard:hover {
+    -ms-transform:scale(1.03);
+    -webkit-transform:scale(1.03);
+    -moz-transform:scale(1.03);
+    -o-transform:scale(1.03);
+    transform:scale(1.03);
+    cursor: pointer;
+}
+
+.PromoCard::before {
+    background: var(--border-green);
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    right: -5px;
+    top: 5px;
+    width: 5px;
+}
+
+.PromoCard:after {
+    background: #548b5b;
+    bottom: -5px;
+    content: "";
+    display: block;
+    height: 5px;
+    position: absolute;
+    left: 5px;
+    width: 100%;
+}
+
+.PromoCard > a {
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.PromoCardImg {
+    margin: 0 auto;
+    width: 130px;
+}
+
+.Description {
+    color: #fff;
+    font-family: Lato, sans-serif;
+    font-size: 15px !important;
+    font-weight: 700;
+    line-height: 22px;
+    margin: 10px auto 0 !important;
+    padding: 0;
+    text-transform: uppercase;
+    width: 160px;
+}
+
+@media screen and (max-width: 767px) {
+    .PromoCard {
+        height: 118px;
+        width: 118px;
+    }
+
+    .PromoCard::before {
+        right: -2px;
+        top: 2px;
+        width: 2px;
+    }
+
+    .PromoCardImg {
+        width: 55px;
+    }
+
+    .Description {
+        font-size: 10px !important;
+        line-height: 13px;
+        margin: 4px auto 0;
+        padding: 0 10px;
+        width: auto;
+    }
+}

@@ -1,0 +1,62 @@
+.SchoolBox {
+    backface-visibility: hidden;
+    background: var(--off-light-green);
+    display: inline-block;
+    height: 306px;
+    margin: 0 19px 23px;
+    position: relative;
+    transform: scale(1);
+    width: 306px;
+    box-shadow: 7px 5px 18px 3px rgb(3 3 3 / 20%);
+    border-radius: 5px;
+    outline: none;
+}
+
+.SchoolBox:hover {
+    -ms-transform:scale(1.03);
+    -webkit-transform:scale(1.03);
+    -moz-transform:scale(1.03);
+    -o-transform:scale(1.03);
+    transform:scale(1.03)
+}
+
+.SchoolBoxImg {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.SchoolBoxImg span {
+    min-height: 100%;
+}
+
+.SchoolBoxImg img {
+    border-radius: 5px 5px 0 0;
+}
+
+.SchoolBoxDescription {
+    text-align: center;
+    margin: 0 10px;
+    color: var(--white);
+}
+
+.SchoolBoxDescriptionText {
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 15px;
+}
+
+.SchoolBoxDescriptionTextSm {
+    font-weight: 300;
+    font-size: 14px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+    .SchoolBox {
+        width: auto;
+        margin-bottom: 50px;
+      }
+}

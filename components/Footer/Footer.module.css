@@ -1,0 +1,66 @@
+.Footer {
+    background: var(--off-green);
+    overflow: hidden;
+    padding-top: 70px;
+    position: relative;
+    z-index: 2;
+}
+
+.Footer:before {
+    background: var(--off-light-green);
+    content: "";
+    display: block;
+    height: 234px;
+    left: 0;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    z-index: 1;
+}
+
+.Wrapper {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+
+.LeftArea {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    width: 503px;
+}
+
+.LeftArea:before {
+    background: #338d33;
+    content: "";
+    display: block;
+    height: 513px;
+    left: -10000px;
+    position: absolute;
+    top: 0;
+    width: 10000px;
+    z-index: 1;
+}
+
+.MapWrapper {
+    height: 513px;
+    overflow: hidden;
+    position: relative;
+}
+
+.Map {
+    background: url('../../assets/map.png') 50% no-repeat;
+    background-size: cover;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+
+.RightArea {
+    display: inline-block;
+    margin-left: 20px;
+    vertical-align: top;
+    width: 456px;
+}

@@ -1,0 +1,16 @@
+.SchoolGrid {
+    display: flex;
+    justify-content: space-between;
+    height: 350px;
+}
+
+@media screen and (max-width: 767px) {
+    .SchoolGrid {
+        flex-direction: column;
+        height:auto;
+    }
+    
+    .Schools {
+        margin-top: 80px;
+    }
+}
