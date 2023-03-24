@@ -49,7 +49,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                {/* <div className={styles.RightArea}>
+                <div className={styles.RightArea}>
                     <div className="footer-carousel-promos-wrapper">
                         <div className="ftr-carousel-title">Find out more</div>
                         <div className="footer-carousel-promos-inner">
@@ -107,7 +107,7 @@ const Footer = () => {
                     <div className="ftr-credits-right">
                         <h5 className="">{new Date().getFullYear()} &copy; chepkolon schools - All rights reserved</h5>
                     </div>
-                </div> */}
+                </div>
             </div>
         </div>
     )

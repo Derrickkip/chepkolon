@@ -941,7 +941,7 @@ ul.mk-tree-menu li a {
   .sl-content-area .sl-content-main .sl-content-right {
     float: none;
     padding: 24px 30px 20px;
-    width: auto;
+    width: auto !important;
   }
 
   .secondLvlCss>p.featuredParagraph {
