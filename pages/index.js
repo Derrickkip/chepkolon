@@ -8,6 +8,7 @@ import Difference from '../components/Difference'
 import WhyChepkolon from '../components/WhyUs'
 import Calendar from '../components/calendar'
 import TopHeader from '../components/topHeader'
+import NewsComponent from '../components/News'
 
 
 export default function Home() {
@@ -16,8 +17,9 @@ export default function Home() {
           <Carousel />
           <Welcome />
           <Schools />
-          <WhyChepkolon />
-          <Difference />
+          {/* <WhyChepkolon /> */}
+          {/* <Difference /> */}
+          <NewsComponent />
           <TopHeader />
           <Calendar />
         </>  

@@ -4,13 +4,130 @@
     height: 350px;
 }
 
+.Links>div:first-of-type {
+    border: 1px solid #b6230a;
+}
+
+.Links>div:nth-of-type(2) {
+    border: 1px solid #2d637f;
+}
+
+.Links>div:nth-of-type(3) {
+    border: 1px solid #a46e08;
+}
+
+
+.Links {
+    left: 20px;
+    margin: 50px 0;
+    position: relative;
+    text-align: center;
+    width: calc(100% - 40px);
+}
+
+.Links .Link {
+    display: inline-block;
+    height: 390px;
+    margin: 0 10px;
+    position: relative;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+    width: 290px;
+}
+
+.Links .Link .ImageBox {
+    position: absolute;
+    height: Calc(100% - 40px);
+    left: 15px;
+    top: 15px;
+    width: Calc(100% - 30px);
+}
+
+.Links .Link .ImageBox span span::after {
+    background-color: transparent;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(transparent),to(rgba(0,0,0,.7)));
+    background-image: -webkit-linear-gradient(transparent,rgba(0,0,0,.7));
+    background-image: -moz-linear-gradient(transparent,rgba(0,0,0,.7));
+    background-image: -o-linear-gradient(transparent,rgba(0,0,0,.7));
+    background-image: linear-gradient(transparent,rgba(0,0,0,.7));
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.Links .Link .ImageBox span:first-of-type {
+   height: 100% !important;
+}
+
+.Links .Link .ImageBox span img {
+    display: inline-block;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+    width: 100%;
+}
+
+.LinkInfo {
+    bottom: 30px;
+    left: 50%;
+    position: absolute;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.LinkInfo div {
+    color: #fff;
+    font-family: GoudyOldStyle;
+}
+
+.LinkInfo div:first-of-type {
+    font-size: 25px;
+    letter-spacing: .1em;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.LinkInfo div:nth-of-type(2) {
+    font-size: 25px;
+    letter-spacing: 0;
+    line-height: 30px;
+}
+
+.LinkInfo div:nth-of-type(3) {
+    font-size: 16px;
+    font-style: italic;
+    line-height: 30px;
+}
+
+.Links a {
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
 @media screen and (max-width: 767px) {
-    .SchoolGrid {
-        flex-direction: column;
-        height:auto;
-    }
-    
-    .Schools {
-        margin-top: 80px;
+    .Links .Link {
+        display: block;
+        left: 50%;
+        margin: 10px;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
     }
 }
+

@@ -1,12 +1,172 @@
 .Footer {
-    background: var(--off-green);
-    overflow: hidden;
-    padding-top: 70px;
+    font-family: Sorts Mill Goudy;
+    left: 20px;
+    margin-top: 100px;
     position: relative;
-    z-index: 2;
+    text-align: center;
+    width: Calc(100% - 40px);
 }
 
-.Footer:before {
+.Footer .Addresses .AddressItem > span {
+    display: inline-block !important;
+    height: 50px !important;
+    width: 50px !important;
+}
+
+.Footer .Addresses .AddressItem  span img {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.Footer h2 {
+    color: #717781;
+    font-size: 35px;
+    font-weight: 400;
+    letter-spacing: .1em;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.Footer .FMap {
+    height: 289px;
+    text-align: center;
+    width: 100%;
+}
+
+.Footer .FMap .FMapInner {
+    background-image: url('../../assets/map.png');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    -moz-background-size: contain;
+    background-size: contain;
+    display: inline-block;
+    height: 100%;
+    max-width: 882px;
+    position: relative;
+    width: 100%;
+}
+
+.Footer .Addresses {
+    display: inline-block;
+    margin: 40px 0;
+    max-width: 970px;
+    text-align: center;
+    width: 100%;
+}
+
+.Footer .Addresses .AddressItem {
+    display: inline-block;
+    width: 30%;
+}
+
+.Footer .Addresses .AddressItem h4 {
+    color: #000;
+    font-family: GoudyOldStyle;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .36em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.Footer .Addresses .AddressItem h3 {
+    color: #000;
+    font-family: calibri;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+.Footer .Addresses .AddressItem h3 span {
+    display: block;
+}
+
+.Footer .Addresses .AddressItem .Tel {
+    color: #000;
+    display: block;
+    font-family: calibri;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 18px;
+    margin-top: -5px;
+}
+
+.Footer .Addresses .AddressItem .Email {
+    -webkit-box-shadow: 0 5px 7px 0 rgba(0,0,0,.2);
+    -moz-box-shadow: 0 5px 7px 0 rgba(0,0,0,.2);
+    box-shadow: 0 5px 7px 0 rgba(0,0,0,.2);
+    display: inline-block;
+    font-family: GoudyOldStyle;
+    font-size: 14px;
+    height: 50px;
+    letter-spacing: .1em;
+    line-height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
+    width: 137px;
+}
+
+.Footer .Addresses>div:first-of-type .Email {
+    border: 1px solid #b6230a;
+    color: #b6230a;
+}
+
+.Footer .Addresses>div:nth-of-type(2) .Email {
+    border: 1px solid #2d637f;
+    color: #2d637f;
+}
+
+.Footer .Addresses>div:nth-of-type(3) .Email {
+    border: 1px solid #a46e08;
+    color: #a46e08;
+}
+
+.BottomCredits {
+    height: 40px;
+    width: 100%;
+}
+
+.Footer .BottomCredits .ButtonTop {
+    cursor: pointer;
+    display: inline-block;
+    height: 30px;
+    left: 50%;
+    position: absolute;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 50px;
+}
+
+.Footer .BottomCredits .ButtonTop:after {
+    background-position: -13px -166px;
+    content: "";
+    display: inline-block;
+    height: 19px;
+    width: 10px;
+}
+
+
+@media screen and (max-width: 767px) {
+    .Footer .Addresses .AddressItem {
+        display: block;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+}
+
+/* .Footer .BottomCredits .Right {
+    float: right;
+} */
+
+/* .Footer:before {
     background: var(--off-light-green);
     content: "";
     display: block;
@@ -18,11 +178,15 @@
     z-index: 1;
 }
 
+
+
 .Wrapper {
     position: relative;
     text-align: center;
     z-index: 2;
 }
+
+
 
 .LeftArea {
     display: inline-block;
@@ -42,6 +206,8 @@
     width: 10000px;
     z-index: 1;
 }
+
+
 
 .MapWrapper {
     height: 513px;
@@ -63,9 +229,9 @@
     margin-left: 20px;
     vertical-align: top;
     width: 456px;
-}
+} */
 
-@media screen and (max-width: 767px) {
+/* @media screen and (max-width: 767px) {
     .Map {
         width: auto;
         margin: 10px;
@@ -74,4 +240,4 @@
     .LeftArea {
         width: auto;
     }
-}
+} */

@@ -19,11 +19,11 @@ const settings = {
 };
 return (
 	<>
-        <div className="carousel-container">
+        <div className="">
             <Slider {...settings}>
                 {images.map((item) => (
                     <div key={item.id}>
-                    <Image src={item.src} alt={item.alt} />
+                        <Image src={item.src} alt={item.alt} />
                     </div>
                 ))}
             </Slider>

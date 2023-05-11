@@ -5,6 +5,7 @@ import PromoCard from "../PromoCard";
 
 import styles from './Footer.module.css'
 import classNames from 'classnames';
+import Image from 'next/image';
 
 const items = [
     {
@@ -41,72 +42,59 @@ const items = [
 
 const Footer = () => {
     return (
-        <div className={classNames(styles.Footer, 'clearfix')}>
-            <div className={classNames(styles.Wrapper, 'clearfix')}>
-                <div className={styles.LeftArea}>
-                    <div className={styles.MapWrapper}>
-                        <div className={styles.Map}>
-                        </div>
-                    </div>
-                </div>
-                <div className={styles.RightArea}>
-                    <div className="footer-carousel-promos-wrapper">
-                        <div className="ftr-carousel-title">Find out more</div>
-                        <div className="footer-carousel-promos-inner">
-                            <div className="prev-nav-triangle" style={{display: 'block'}}>
-                            </div>
-                            <div className="next-nav-triangle" style={{display: 'block'}}>
-                            </div>
-                            <div className="footer-promo-c-carousel slick-initialized slick-slide">
-                                <div aria-live="polite" className="slick-list draggable">
-                                    <div className="slick-track" style={{opacity: '1', width: '35000px', transform: 'transform3d(-750px, 0px, 0px)'}}>
-                                        {items.map((item, i) => {
-                                            return (
-                                                <PromoCard key={i}src={item.src} text={item.description} alt={item.alt}/>
-                                            )
-                                        })}
+        <div className={classNames(styles.Footer)}>
+            <h2>Contact</h2>
+            <div className={styles.FMap}>
+                <div className={styles.FMapInner}></div>
+            </div>
+            <div className={styles.FMapMobile}>
 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="ftr-address-area clearfix">
-                            <div className="ftr-address-left">
-                                <p>Chepkolon Green Highlands Academy</p>
-                                <p>Kericho</p>
-                                <p>Chepkolon</p>
-                                <a href="tel:0727138659">0727138659</a>
-                            </div>
-                            <div className="ftr-address-left ftr-premier-school">
-                                <p>Chepkolon Premier School</p>
-                                <p>Kericho</p>
-                                <p>Nyagacho</p>
-                                <a href="tel: 0727138659">0727138659</a>
-                            </div>
-                            <div className="ftr-address-right">
-                                <Button text='Enquire' />
-                                <Button text='Visit Us' />
-                                <Button text='Apply' />
-                            </div>
-                            <div className="ftr-address-left showOnlyMobile">
-                                <p>CGHA</p>
-                                <p>Kericho</p>
-                                <p>Chepkolon</p>
-                                <a href="tel:0727138659">0727138659</a>
-                            </div>
-                            <div className="ftr-address-left showOnlyMobile">
-                                <p>Premier School</p>
-                                <p>Kericho</p>
-                                <p>Nyagacho</p>
-                                <a href="tel: 0727138659">0727138659</a>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+            <div className={styles.Addresses}>
+                <div className={styles.AddressItem}>
+                    <Image className={styles.FIcon} src={require("../../assets/icons/boarding.png")} alt="placeholder"/>
+                    <h4>Address</h4>
+                    <h3>Chepkolon Green Highlands Academy,
+                        <span></span>
+                        Kericho,
+                        <span></span>
+                        Chepkolon
+                    </h3>
+                    <h4>Telephone</h4>
+                    <a className={styles.Tel} href="tel: 0727138659" title="0727138659">0727138659</a>
+                    <a className={styles.Email} href="tel: 0727138659" title="0727138659">Contact</a>
                 </div>
-                <div className="ftr-credits clearfix">
-                    <div className="ftr-credits-right">
-                        <h5 className="">{new Date().getFullYear()} &copy; chepkolon schools - All rights reserved</h5>
-                    </div>
+                <div className={styles.AddressItem}>
+                    <Image className={styles.FIcon} src={require("../../assets/icons/boarding.png")} alt="placeholder"/>
+                    <h4>Address</h4>
+                    <h3>Chepkolon Junior School,
+                        <span></span>
+                        Kericho,
+                        <span></span>
+                        Nyagacho
+                    </h3>
+                    <h4>Telephone</h4>
+                    <a className={styles.Tel} href="tel: 0727138659" title="0727138659">0727138659</a>
+                    <a className={styles.Email} href="tel: 0727138659" title="0727138659">Contact</a>
+                </div>
+                <div className={styles.AddressItem}>
+                    <Image className={styles.FIcon} src={require("../../assets/icons/boarding.png")} alt="placeholder"/>
+                    <h4>Address</h4>
+                    <h3>Chepkolon Premier School,
+                        <span></span>
+                        Kericho
+                        <span></span>
+                        Nyagacho
+                    </h3>
+                    <h4>Telephone</h4>
+                    <a className={styles.Tel} href="tel: 0727138659" title="0727138659">0727138659</a>
+                    <a className={styles.Email} href="tel: 0727138659" title="0727138659">Contact</a>
+                </div>
+            </div>
+            <div className={styles.BottomCredits}>
+                <div className={styles.ButtonTop}></div>
+                <div className={styles.Right}>
+                    <h5 className="">{new Date().getFullYear()} &copy; chepkolon schools - All rights reserved</h5>
                 </div>
             </div>
         </div>

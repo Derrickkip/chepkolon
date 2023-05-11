@@ -1,0 +1,165 @@
+.Navbar {
+    border: 0;
+    font-size: 14px;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    padding: 0;
+    background: #338d33;
+    color: #ffffff;
+    box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15);
+  }
+
+
+  
+  .NavbarTransparent {
+    background: transparent !important;
+    padding-top: 25px;
+    box-shadow: none;
+  }
+  
+  .NavbarBrand {
+    color: #ffffff !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .Bold {
+    font-weight: 800;
+  }
+  
+  .NavbarLink {
+    line-height: 1.6;
+    margin: 15px 3px;
+    padding: 10px 15px;
+    opacity: 0.8;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    /* color: #338d33 !important; */
+    color: #ffffff !important;
+    display: flex;
+  }
+
+  .NavbarCollapse {
+    color: #338d33;
+  }
+
+
+  /* .NavbarTranslate {
+    width: 100%;
+    position: relative;
+    display: flex;
+    -ms-flex-pack: justify !important;
+    justify-content: space-between !important;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    -moz-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    -o-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    -ms-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
+  } */
+
+  /*
+
+  .NavbarToggler {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .NavbarTogglerBar {
+    background: #ffffff !important;
+    display: block;
+    position: relative;
+    width: 24px;
+    height: 2px;
+    border-radius: 1px;
+    margin: 0 auto;
+  }
+  
+  /* .navbar-toggle .icon-bar {
+    display: block;
+    position: relative;
+    background: #fff;
+    width: 24px;
+    height: 2px;
+    border-radius: 1px;
+    margin: 0 auto;
+  }
+  .navbar-header .navbar-toggle {
+    margin-top: 12px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .bar1,
+  .bar2,
+  .bar3 {
+    outline: 1px solid transparent;
+  } */
+
+@media screen and (max-width: 769px) {
+    .NavbarLink {
+        color:  #338d33 !important;
+    }
+/*
+    .NavbarCollapse {
+        position: fixed;
+        display: block;
+        top: 0;
+        height: 100%;
+        width: 230px;
+        right: 0px;
+        z-index: 1032;
+        visibility: visible;
+        background-color: #999;
+        overflow-y: visible;
+        border-top: none;
+        text-align: left;
+        border-left: 1px solid #ccc5b9;
+        padding-right: 0px;
+        padding-left: 40px;
+        padding-top: 15px;
+        -webkit-transform: translateX(230px);
+        -moz-transform: translateX(230px);
+        -o-transform: translateX(230px);
+        -ms-transform: translateX(230px);
+        transform: translateX(230px);
+        -webkit-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
+        -moz-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
+        -o-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
+        -ms-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
+        transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    } */
+
+    /* .NavbarCollapse ul {
+        position: relative;
+        z-index: 3;
+        height: 95%;
+      }
+
+    .NavbarCollapse::after {
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background-color: #fffcf5;
+        background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(112, 112, 112, 0) 60%,
+          rgba(186, 186, 186, 0.15) 100%
+        );
+        display: block;
+        content: "";
+        z-index: 1;
+      } */
+  
+} 

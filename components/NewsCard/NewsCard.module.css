@@ -1,0 +1,60 @@
+.NewsCard {
+  padding: 0px 15px;
+  text-align: center;
+}
+
+.Wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.Project {
+  border-bottom: 1px solid #c0c0c0;
+}
+
+.BlogLink {
+  height: 225px;
+}
+
+.Image {
+  max-width: 100%;
+  width: 100%;
+}
+
+.DtLink {
+  font-size: 19px;
+  color: var(--off-green);
+  text-decoration: none;
+  font-weight: 400;
+  padding: 30px 0px;
+  display: inline-block;
+  max-height: 90px;
+  min-height: 90px;
+  overflow: hidden;
+}
+
+.Description {
+  padding-bottom: 15px;
+  max-height: 80px;
+  overflow: hidden;
+  height: 80px;
+}
+
+.BtnBlack {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid var(--off-light-green);
+  margin: 20px 0px;
+  color: var(--off-light-green);
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  font-family: 'Lato',sans-serif;
+}
+
+.BtnBlack:hover {
+  background-color: var(--off-light-green);
+  color: #fff;
+}

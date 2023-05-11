@@ -1,142 +1,114 @@
-.WelcomeSection {
-    padding: 70px 0 85px;
-    transition: all .7s ease;
-}
-
-.WelcomeSectionInner {
+.Welcome {
+    padding-bottom: 40px;
+    padding-top: 90px;
     position: relative;
-    justify-content: center;
 }
 
-.WelcomeSectionImage {
-    background: var(--green);
-    border-radius: 100%;
-    box-shadow: 0 0 10px 2px rgb(3 3 3 / 30%);
-    height: 240px;
-    left: 0;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    width: 240px;
-    z-index: 2;
-}
-
-.WelcomeSectionImage span{
-    height: 100% !important;
-}
-
-.WelcomeSectionImage img {
-    height: 240px;
-    width: 373px;
-    /* position: absolute; */
-    left: -66.5px;
-    top: 0px;
-    opacity: 1;
-    display: flex;
-    transition: opacity .3s ease;
-}
-
-.WelcomeSectionQuote {
-    background: var(--green);
-    box-sizing: border-box;
-    float: right;
-    margin: 10px;
-    min-height: 220px;
-    padding: 36px 45px 36px 150px;
+.WelcomeInner {
+    margin: 0 auto;
+    max-width: 1320px;
     position: relative;
-    width: 610px;
+    text-align: center;
     z-index: 1;
 }
 
-.WelcomeSectionQuote:before{
-    background: var(--border-green);
+.WelcomeInner:after {
+    clear: both;
     content: "";
-    display: block;
-    height: 100%;
-    position: absolute;
-    right: -5px;
-    top: 5px;
-    width: 5px;
+    display: table;
 }
 
-.WelcomeSectionQuote:after {
-    background: var(--border-green);
-    bottom: -5px;
-    content: "";
-    display: block;
-    height: 5px;
-    left: 5px;
-    position: absolute;
-    width: 100%;
-}
-
-
-.WelcomeSectionQuote p:before {
-    left: -10px;
-    pointer-events: none;
-    position: absolute;
-    top: -12px;
-    background-position: -279px -227px;
-    content: open-quote;
+.WelcomePrimary {
     display: inline-block;
-    font-size: 36px;
-    color: #00000050;
-}
-
-.WelcomeSectionQuote p:after {
-    bottom: -10px;
-    pointer-events: none;
-    position: absolute;
-    right: -1px;
-    background-position: -307px -227px;
-    content: close-quote;
-    display: inline-block;
-    font-size: 36px;
-    color: #00000050;
-}
-
-.WelcomeText {
-    color: var(--dark);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 27px;
-    margin: 29px auto 0;
+    padding: 10px;
     text-align: center;
-    width: 650px;
+    width: 730px;
 }
 
-@media screen and (max-width: 767px) {
-    .WelcomeSection {
-        padding: 0 20px;
-        margin: 0 auto;
-        width: auto;
-        z-index: 1;
-    }
+.WelcomePrimary header {
+    padding-bottom: 22px;
+}
 
-    .WelcomeSectionInner {
-        margin: 0 auto;
-        width: 280px;    
-    }
+.GhpHeader {
+    position: relative;
+}
 
-    .WelcomeSectionImage {
-        height: 285px;
-        width: 285px;
-    }
+.GhpHeader h2, .GhpHeader h3 {
+    font-family: Sorts Mill Goudy,Times New Roman,sans-serif;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: uppercase;
+}
 
-    .WelcomeSectionQuote {
+.WelcomePrimary header h2 {
+    font-family: GoudyOldStyle;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.GhpHeader h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.WelcomePrimary header h2 span {
+    text-transform: none;
+}
+
+.WelcomePrimary header h3 {
+    color: #717781;
+    font-size: 38px;
+    letter-spacing: .1em;
+    font-family: Sorts Mill Goudy,Times New Roman,sans-serif;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.WelcomePrimary>p:first-of-type {
+    color: #3d3f41;
+    font-family: GoudyOldStyle;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.WelcomePrimary>p:nth-of-type(2) {
+    color: #3d3f41;
+    font-family: calibri,sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: -.01em;
+    line-height: 20px;
+    margin-bottom: 16px;
+}
+
+@media screen and (max-width: 769px) {
+    .WelcomePrimary {
+        background: #fff;
         float: none;
-        height: auto;
-        margin-top: 140px;
-        min-height: inherit;
-        padding: 170px 20px 27px;
-        position: relative;
-        width: 280px;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+        width: 100%;
     }
 
-    .WelcomeText {
-        line-height: 24px;
-        margin-top: 24px;
-        padding: 0 10px;
-        width: auto;
+    .Welcome .WelcomeInner {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .Welcome {
+        padding-bottom: 30px;
+        padding-top: 70px;
+    }
+
+    .GhpHeader h2 {
+        font-size: 15px;
+    }
+
+    .GhpHeader h3 {
+        font-size: 35px;
     }
 }
