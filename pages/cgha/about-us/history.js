@@ -1,11 +1,23 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import {useState, createRef, useEffect} from 'react'
 
 import styles from './AboutUs.module.css'
 
 import classNames from 'classnames';
 
 export default function About() {
+    // const [count, setCount] = useState(1);
+    // const myRef = createRef();
+    
+    // const incCount = () => setCount(c => c + 1);
+
+    // const incRef = () => myRef.current++;
+
+    // useEffect(() => {
+    //     console.log(myRef)
+    // })
+
     return (
         <>
         <section className={styles.SlHero}>
@@ -29,12 +41,12 @@ export default function About() {
                     </li>
                     <li className={styles.BreadcrumbsItem}>
                         <a className={styles.BreadcrumbsLink} href='javascript:void(0)'>
-                            Why Chepkolon
+                           History
                         </a>
                     </li>
                 </ul>
                 <div className={styles.PageTitle}>
-                    <h1>Why Chepkolon?</h1>
+                    <h1>Our History</h1>
                 </div>
             </div>
             <aside className={styles.Sidebar}>
