@@ -45,20 +45,41 @@
     width: Calc(100% - 30px);
 }
 
-.Links .Link .ImageBox span span::after {
-    background-color: transparent;
-    background-image: -webkit-gradient(linear,left top,left bottom,from(transparent),to(rgba(0,0,0,.7)));
-    background-image: -webkit-linear-gradient(transparent,rgba(0,0,0,.7));
-    background-image: -moz-linear-gradient(transparent,rgba(0,0,0,.7));
-    background-image: -o-linear-gradient(transparent,rgba(0,0,0,.7));
-    background-image: linear-gradient(transparent,rgba(0,0,0,.7));
+.Links .Link .ImageBox:before { 
+    background: -moz-linear-gradient(top,#000 0,rgba(2,1,2,0) 100%);
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,#000),color-stop(100%,rgba(2,1,2,0)));
+    background: -webkit-linear-gradient(top,#000,rgba(2,1,2,0));
+    background: -o-linear-gradient(top,#000 0,rgba(2,1,2,0) 100%);
+    background: -ms-linear-gradient(top,#000 0,rgba(2,1,2,0) 100%);
+    background: -webkit-gradient(linear,left top,left bottom,from(#000),to(rgba(2,1,2,0)));
+    background: linear-gradient(180deg,#000 0,rgba(2,1,2,0));
+    bottom: 50%;
     content: "";
-    display: block;
-    height: 100%;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#00020102",GradientType=0);
     left: 0;
+    opacity: .85;
+    position: absolute;
+    right: 0;
     top: 0;
-    width: 100%;
 }
+
+.Links .Link .ImageBox:after {
+    background: -moz-linear-gradient(top,rgba(2,1,2,0) 0,#000 100%);
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,rgba(2,1,2,0)),color-stop(100%,#000));
+    background: -webkit-linear-gradient(top,rgba(2,1,2,0),#000);
+    background: -o-linear-gradient(top,rgba(2,1,2,0) 0,#000 100%);
+    background: -ms-linear-gradient(top,rgba(2,1,2,0) 0,#000 100%);
+    background: -webkit-gradient(linear,left top,left bottom,from(rgba(2,1,2,0)),to(#000));
+    background: linear-gradient(180deg,rgba(2,1,2,0) 0,#000);
+    bottom: 0;
+    content: "";
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00020102",endColorstr="#000000",GradientType=0);
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 
 .Links .Link .ImageBox span:first-of-type {
    height: 100% !important;
@@ -116,6 +137,18 @@
     position: absolute;
     top: 0;
     width: 100%;
+}
+
+.ImageBox:hover {
+    background-color: green;
+}
+
+.Links .Link .ImageBox, .Links .Link .ImageBox:after {
+    position: absolute;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    transition: all .3s ease;
 }
 
 @media screen and (max-width: 767px) {

@@ -38,7 +38,7 @@
     background-position: 50%;
     background-repeat: no-repeat;
     -moz-background-size: contain;
-    background-size: contain;
+    background-size: auto;
     display: inline-block;
     height: 100%;
     max-width: 882px;

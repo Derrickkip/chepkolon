@@ -1,0 +1,89 @@
+.HpStories.JustEvents {
+    padding: 90px 0;
+}
+
+.HpStories {
+    text-align: center;
+}
+
+.Stories {
+    padding-top: 10px;
+    position: relative;
+}
+
+.HpStories .GhpHeader {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.GhpHeader.MaskLine {
+    display: inline-block;
+    position: relative;
+    z-index: 5;
+}
+
+.GhpHeader.MaskLine:before {
+    background: #fff;
+    bottom: 5px;
+    content: "";
+    left: 50%;
+    margin-left: -2px;
+    position: absolute;
+    right: 0;
+    top: -35px;
+    width: 4px;
+    z-index: -1;
+}
+
+.HpStories .GhpHeader h2 {
+    color: #1d2731;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.GhpHeader h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.GhpHeader h2, .GhpHeader h3 {
+    font-family: Sorts Mill Goudy,Times New Roman,sans-serif;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.GhpHeader h3 {
+    color: #956728;
+    font-size: 50px;
+    letter-spacing: .1em;
+}
+
+.HpStories .GhpHeader h3 {
+    color: #717781;
+}
+
+.StoriesInner {
+    min-height: 420px;
+    text-align: left;
+}
+
+@media screen and (max-width: 1250px) {
+    .GhpHeader h3 {
+        font-size: 35px;
+    }
+
+    .GhpHeader h2 {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .Stories {
+        width: 100%;
+    }
+
+    .Stories .GhpHeader h3 {
+        font-size: 26px;
+    }
+}

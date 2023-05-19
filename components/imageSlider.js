@@ -21,9 +21,9 @@ return (
 	<>
         <div className="">
             <Slider {...settings}>
-                {images.map((item) => (
-                    <div key={item.id}>
-                        <Image src={item.src} alt={item.alt} />
+                {images.map((item, index) => (
+                    <div key={index}>
+                        <Image src={item.src} alt={item.alt}/>
                     </div>
                 ))}
             </Slider>

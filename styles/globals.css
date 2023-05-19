@@ -33,12 +33,16 @@ a {
   text-decoration: none;
 }
 
+em {
+  font-style: normal;
+}
+
 link {
   text-decoration: none;
   user-select: none;
 }
 
-section {
+section, header {
   display: block;
 }
 
@@ -129,10 +133,481 @@ section {
   display: inline-block;
 }
 
-.react-multi-carousel-list {
+.carousel-full {
   height: 100vh;
+}
+
+.react-multi-carousel-list {
+  height: 100%;
+}
+
+.react-multi-carousel-track {
+  height: 100%;
+}
+
+.react-multi-carousel-track li {
+  height: 100%;
+}
+
+.carousel-item {
+  height: 100%;
+}
+
+.carousel-item span {
+  height: 100% !important;
 }
 
 /* .hidden {
   display: hidden;
 } */
+
+.hero-image-area {
+  /* background: #00740f; */
+  height: 100vh;
+  /* left: 0; */
+  overflow: hidden;
+  /* position: fixed; */
+  /* top: 0; */
+  width: 100%;
+  z-index: 1;
+}
+
+.hero-images-area {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-images-area .hero-images-area-inner {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-images-area .hero-images-area-inner span {
+  height: 100% !important;
+  left: 0;
+  overflow: hidden;
+  /* position: absolute; */
+  top: 0;
+  width: 100%;
+}
+
+.hero-images-area > span {
+  height: 100%;
+}
+
+
+.hero-images-area::after {
+  background-color: rgba(0, 0, 0, 0.2);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.header a {
+  color: #fff;
+  display: block;
+  font-family: Sorts Mill Goudy;
+  font-size: 29px;
+  left: 50%;
+  letter-spacing: .1em;
+  line-height: 31px;
+  max-width: 210px;
+  opacity: 1;
+  position: absolute;
+  text-align: center;
+  top: 40px;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: 4;
+}
+
+.hero__text {
+  bottom: 115px;
+  left: 90px;
+  margin: 0 auto;
+  opacity: 1;
+  position: absolute;
+  right: 90px;
+  text-align: center;
+  z-index: 12;
+}
+
+.hero__text>div:first-of-type {
+  display: inline-block;
+  padding-bottom: 14px;
+  position: relative;
+}
+
+.hero__text h1 {
+  color: #fff;
+  font-family: Sorts Mill Goudy,Times New Roman,sans-serif;
+  position: relative;
+}
+
+.hero__text h1 strong {
+  font-size: 70px;
+  font-weight: 400;
+  letter-spacing: .1em;
+  line-height: 1;
+  margin-left: -.05em;
+  opacity: 1;
+  text-transform: uppercase;
+}
+
+.hero__text strong {
+  opacity: 1;
+  -webkit-transition: .2s ease-in-out .3s;
+  -o-transition: .2s ease-in-out .3s;
+  -moz-transition: .2s ease-in-out .3s;
+  transition: .2s ease-in-out .3s;
+}
+
+.hero__text h1 small {
+  display: block;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 5px;
+  opacity: 1;
+}
+
+.scrollDownButton {
+  bottom: 37px;
+  display: inline-block;
+  font-size: 0;
+  height: 99px;
+  left: 50%;
+  margin-left: -50px;
+  overflow: visible;
+  position: absolute;
+  text-align: center;
+  width: 101px;
+  z-index: 5;
+}
+
+.scrollDownButton:hover {
+  bottom: 33px;
+}
+
+.scrollDownButton i {
+  display: inline-block;
+  position: relative;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
+  -moz-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.scrollDownButton i:before {
+  background-image: url(../assets/arrow-down.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  -moz-background-size: 100%;
+  background-size: 100%;
+  content: "";
+  display: inline-block;
+  height: 20px;
+  width: 10px;
+}
+
+.story__type i:after {
+  background-position: -64px -143px;
+  content: "";
+  display: inline-block;
+  height: 16px;
+  width: 15px;
+  background-color: transparent;
+  background-image: url(../assets/icons/calendar.png);
+  background-repeat: no-repeat;
+}
+
+.custom-dot-list-style {
+    bottom: 27px !important;
+    left: 20px !important;
+    position: absolute !important;
+    z-index: 5 !important;
+    right:auto !important;
+}
+
+.react-multiple-carousel__arrow {
+  z-index: 5 !important;
+}
+
+.react-multi-carousel-dot  {
+    cursor: pointer ;
+    display: inline-block;
+    height: 35px !important;
+    margin-right: 15px !important;
+    position: relative !important;
+    vertical-align: middle !important;
+    width: 35px !important;
+    z-index: 5 !important;
+}
+
+.react-multi-carousel-dot button, .react-multi-carousel-dot button:before {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    -webkit-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.react-multi-carousel-dot button {
+  /* background: transparent !important; */
+  border: 1px solid #fff !important;
+  font-size: 0 !important;
+  height: 20px !important;
+  margin: -10px 0 0 -10px !important;
+  opacity: 1 !important;
+  width: 20px !important;
+}
+
+.react-multi-carousel-dot--active button {
+  background: #9c7027 !important;
+}
+
+.header-top:after {
+  background: url(../assets/navDesktopBg.jpg) no-repeat 100% 0/contain;
+  content: "";
+  height: 0;
+  left: -100px;
+  opacity: .5;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: .2s ease-in-out;
+  -o-transition: .2s ease-in-out;
+  -moz-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.btnWithDropDownHead i:after, .btnWithDropDownHead i:before {
+    background-color: transparent;
+    background-image: url(../assets/arrow-down.png);
+    background-repeat: no-repeat;
+}
+
+.btnWithDropDownHead i:before {
+  background-position: -110px -137px;
+  content: "";
+  display: inline-block;
+  height: 6px;
+  width: 11px;
+}
+
+.btnWithDropDownHead i:after, .btnWithDropDownHead i:before {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+  -moz-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+}
+
+.second-level-navigation {
+  background: url(../assets/menuPanelBg.png) no-repeat top/cover;
+  border-right: 1px solid #f3eee6;
+  -webkit-box-shadow: -10px 10px 20px 0 rgba(0,0,0,.2);
+  -moz-box-shadow: -10px 10px 20px 0 rgba(0,0,0,.2);
+  box-shadow: -10px 10px 20px 0 rgba(0,0,0,.2);
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
+  -moz-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  width: 82%;
+}
+
+.extra-content:after {
+  background: url(../assets/SchoolFront.jpg) no-repeat 0 0/cover;
+  content: "";
+  height: 100%;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 102%;
+  z-index: -1;
+}
+
+.promo figcaption:after {
+  background: url(../assets/promosBg.jpg) no-repeat 0 0/cover;
+  bottom: 0;
+  content: "";
+  left: 0;
+  opacity: .8;
+  position: absolute;
+  right: 0;
+  top: 0;
+  top: -3px;
+  z-index: -1;
+}
+
+.carousel-item:before {
+  background: -moz-linear-gradient(top,#000 0,rgba(2,1,2,0) 100%);
+  background: -webkit-gradient(linear,left top,left bottom,color-stop(0,#000),color-stop(100%,rgba(2,1,2,0)));
+  background: -webkit-linear-gradient(top,#000,rgba(2,1,2,0));
+  background: -o-linear-gradient(top,#000 0,rgba(2,1,2,0) 100%);
+  background: -ms-linear-gradient(top,#000 0,rgba(2,1,2,0) 100%);
+  background: -webkit-gradient(linear,left top,left bottom,from(#000),to(rgba(2,1,2,0)));
+  background: linear-gradient(180deg,#000 0,rgba(2,1,2,0));
+  bottom: 50%;
+  content: "";
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#00020102",GradientType=0);
+  left: 0;
+  opacity: .85;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.carousel-item:after {
+  background: -moz-linear-gradient(top,rgba(2,1,2,0) 0,#000 100%);
+  background: -webkit-gradient(linear,left top,left bottom,color-stop(0,rgba(2,1,2,0)),color-stop(100%,#000));
+  background: -webkit-linear-gradient(top,rgba(2,1,2,0),#000);
+  background: -o-linear-gradient(top,rgba(2,1,2,0) 0,#000 100%);
+  background: -ms-linear-gradient(top,rgba(2,1,2,0) 0,#000 100%);
+  background: -webkit-gradient(linear,left top,left bottom,from(rgba(2,1,2,0)),to(#000));
+  background: linear-gradient(180deg,rgba(2,1,2,0) 0,#000);
+  bottom: 0;
+  content: "";
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00020102",endColorstr="#000000",GradientType=0);
+  left: 0;
+  opacity: 1;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.homeBtn:after {
+  background-color: transparent;
+  background-image: url(../assets/icons/calendar.png);
+  background-repeat: no-repeat;
+  -moz-background-size: 220px 159px;
+  background-size: 220px 159px;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.coming-soon {
+    font-family: Sorts Mill Goudy;
+    left: 20px;
+    margin-top: 100px;
+    position: relative;
+    text-align: center;
+    width: Calc(100% - 40px);
+}
+
+.coming-soon h1 {
+    color: #717781;
+    font-size: 35px;
+    font-weight: 400;
+    letter-spacing: .1em;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 1250px) {
+  .hero__text {
+    bottom: 96px;
+  }
+
+  .hero__text h1 strong {
+    font-size: 59px;
+  }
+
+  .hero__text h1 small {
+    font-size: 18px;
+  }
+
+  .scrollDownButton {
+    background: none;
+    height: 56px;
+    margin-left: -28px;
+    width: 57px;
+  }
+
+  .scrollDownButton i {
+    background: none;
+    height: 13px;
+    width: 21px;
+}
+
+  .scrollDownButton i:before {
+    display: block;
+  }
+
+  .react-multi-carousel-dot {
+    margin-right: 0 !important;
+  }
+
+  .custom-dot-list-style {
+    left: 10px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .hero__text {
+    bottom: 140px;
+    left: 20px;
+    right: 20px;
+    text-align: center;
+  }
+
+  .hero__text>div:first-of-type {
+    padding-bottom: 0;
+  }
+
+  .hero__text h1 strong {
+    font-size: 40px;
+  }
+
+  .hero__text h1 small {
+    font-size: 15px;
+  }
+
+  .header a {
+    left: 50%;
+    right: auto;
+    top: 12px;
+  }
+
+  .custom-dot-list-style {
+    left: 10px !important;
+  }
+
+  .scrollDownButton {
+    bottom: 20px;
+  }
+}

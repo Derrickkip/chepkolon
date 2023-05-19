@@ -20,7 +20,7 @@ export default function About() {
             <div className='hero-images-area'>
                 <div className='hero-images-area-inner'>
                     <div>
-                        <Image src={require('../../assets/david-towett-director2.png')} alt="director" style={{position: "absolute", top: '-34px', left: '0px', width: '1254px', height: '836px', opacity: '1'}}/>
+                        <Image src={require('../../../assets/david-towett-director2.png')} alt="director" style={{position: "absolute", top: '-34px', left: '0px', width: '1254px', height: '836px', opacity: '1'}}/>
                     </div>
                 </div>
             </div>
@@ -33,7 +33,7 @@ export default function About() {
             </div>
             <div className='page-title'>
                 <div className='secondLvlCss'>
-                    <h1>Our Story</h1>
+                    <h1>Director&apos;s Welcome</h1>
                 </div>
             </div>
             <div className='sl-content-main clearfix'>
@@ -43,7 +43,7 @@ export default function About() {
                         <span className='bdivider'></span>
                         <Link href="/about-us/welcome">About us</Link>
                         <span className='bdivider'></span>
-                        <span className='bcurrentpage'>Our Story
+                        <span className='bcurrentpage'>Welcome
                         </span>
                     </div>
                     <div className='secondLvlCss'>
@@ -59,7 +59,7 @@ export default function About() {
                         My aim is to provide every child with the experiences, knowledge and academic skills they need to become confident and ambitious adults. We want our young people to have every opportunity available to them so I am committed to encouraging them all to aim high and live their education.
                         </p>
                         <p>
-                            <Image src={require('../../assets/david-towett-director.png')} alt="director" />
+                            <Image src={require('../../../assets/david-towett-director.png')} alt="director" />
                         </p>
                         <p>
                         We hope our website gives you and your child, or children, a real insight into the stimulating, exciting environment and the exceptional relationships that are a fundamental part of our community. Of course, to truly understand that Chepkolon experience, you need to visit us, so please do get in touch with our 

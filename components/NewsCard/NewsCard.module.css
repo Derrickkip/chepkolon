@@ -1,60 +1,401 @@
-.NewsCard {
-  padding: 0px 15px;
+.Story {
+    border: 1px solid hsla(215,6%,63%,.3);
+    /* border: 1px solid red; */
+    position: relative;
+    -webkit-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.HpStories {
   text-align: center;
 }
 
-.Wrapper {
-  overflow: hidden;
+.HpStories.JustEvents {
+  padding: 90px 0;
+}
+
+.HpStories.JustEvents .Story {
+  text-align: left;
+}
+
+.Story:after, .Story:before {
+  bottom: 20px;
+  content: "";
+  left: 20px;
+  pointer-events: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.Story:before {
+  background: hsla(215,6%,63%,.5);
+  opacity: .6;
+  -webkit-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
+  -moz-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  z-index: 4;
+}
+
+.Story:after {
+  background: hsla(218,7%,47%,.5);
+  z-index: -1;
+}
+
+.StoryInner {
+  padding-bottom: 67%;
   position: relative;
-  width: 100%;
 }
 
-.Project {
-  border-bottom: 1px solid #c0c0c0;
+.StoryInner:before {
+  background: -moz-linear-gradient(top,#000 0,rgba(2,1,2,0) 100%);
+  background: -webkit-gradient(linear,left top,left bottom,color-stop(0,#000),color-stop(100%,rgba(2,1,2,0)));
+  background: -webkit-linear-gradient(top,#000,rgba(2,1,2,0));
+  background: -o-linear-gradient(top,#000 0,rgba(2,1,2,0) 100%);
+  background: -ms-linear-gradient(top,#000 0,rgba(2,1,2,0) 100%);
+  background: -webkit-gradient(linear,left top,left bottom,from(#000),to(rgba(2,1,2,0)));
+  background: linear-gradient(180deg,#000 0,rgba(2,1,2,0));
+  content: "";
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#00020102",GradientType=0);
+  height: 40%;
+  left: 20px;
+  opacity: .4;
+  pointer-events: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 4;
 }
 
-.BlogLink {
-  height: 225px;
+.HpStories .Story .StoryLink {
+  z-index: 10;
 }
 
-.Image {
-  max-width: 100%;
-  width: 100%;
+.StoryLink {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 3;
 }
 
-.DtLink {
-  font-size: 19px;
-  color: var(--off-green);
-  text-decoration: none;
-  font-weight: 400;
-  padding: 30px 0px;
-  display: inline-block;
-  max-height: 90px;
-  min-height: 90px;
+.StoryLink:after, .StoryLink:before {
+  content: "";
+  height: 1px;
+  left: 11px;
+  opacity: .6;
+  position: absolute;
+  right: 11px;
+  z-index: 4;
+}
+
+.Story.isEvents .StoryTitle, .Story.isEvents .StoryUser {
+  display: none;
+}
+
+.StoryLink:before {
+  top: 10px;
+}
+
+.StoryLink:after {
+  bottom: 10px;
+}
+
+.StoryImageWrapper {
+  bottom: 20px;
+  -webkit-box-shadow: 0 6px 8px 0 rgba(0,0,0,.2);
+  -moz-box-shadow: 0 6px 8px 0 rgba(0,0,0,.2);
+  box-shadow: 0 6px 8px 0 rgba(0,0,0,.2);
+  left: 20px;
   overflow: hidden;
+  position: absolute;
+  right: 20px;
+  top: 20px;
 }
 
-.Description {
-  padding-bottom: 15px;
-  max-height: 80px;
-  overflow: hidden;
-  height: 80px;
+.StoryImageWrapper:before {
+  background: -moz-linear-gradient(top,#000 0,rgba(2,1,2,0) 100%);
+  background: -webkit-gradient(linear,left top,left bottom,color-stop(0,#000),color-stop(100%,rgba(2,1,2,0)));
+  background: -webkit-linear-gradient(top,#000,rgba(2,1,2,0));
+  background: -o-linear-gradient(top,#000 0,rgba(2,1,2,0) 100%);
+  background: -ms-linear-gradient(top,#000 0,rgba(2,1,2,0) 100%);
+  background: -webkit-gradient(linear,left top,left bottom,from(#000),to(rgba(2,1,2,0)));
+  background: linear-gradient(180deg,#000 0,rgba(2,1,2,0));
+  bottom: 50%;
+  content: "";
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#00020102",GradientType=0);
+  left: 0;
+  opacity: .85;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
-.BtnBlack {
-  display: inline-block;
-  padding: 10px 20px;
-  border: 1px solid var(--off-light-green);
-  margin: 20px 0px;
-  color: var(--off-light-green);
-  -webkit-transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
-  transition: all 0.5s linear;
-  font-family: 'Lato',sans-serif;
+.StoryImageWrapper span {
+  height: 100% !important;
+  /* -o-object-fit: cover; */
+  object-fit: cover;
+  width: 100% !important;
 }
 
-.BtnBlack:hover {
-  background-color: var(--off-light-green);
+.StoryImageWrapper:after {
+  background: -moz-linear-gradient(top,rgba(2,1,2,0) 0,#000 100%);
+  background: -webkit-gradient(linear,left top,left bottom,color-stop(0,rgba(2,1,2,0)),color-stop(100%,#000));
+  background: -webkit-linear-gradient(top,rgba(2,1,2,0),#000);
+  background: -o-linear-gradient(top,rgba(2,1,2,0) 0,#000 100%);
+  background: -ms-linear-gradient(top,rgba(2,1,2,0) 0,#000 100%);
+  background: -webkit-gradient(linear,left top,left bottom,from(rgba(2,1,2,0)),to(#000));
+  background: linear-gradient(180deg,rgba(2,1,2,0) 0,#000);
+  bottom: 0;
+  content: "";
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00020102",endColorstr="#000000",GradientType=0);
+  left: 0;
+  opacity: 1;
+  position: absolute;
+  right: 0;
+  top: 20%;
+}
+
+.StoryInner .ImageOverlay {
+  background-color: hsla(218,7%,47%,.8);
+  height: Calc(100% - 40px);
+  left: 20px;
+  opacity: 0;
+  position: absolute;
+  top: 20px;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease;
+  width: Calc(100% - 40px);
+  z-index: 4;
+}
+
+.StoryType {
   color: #fff;
+  font-family: Sorts Mill Goudy,Times New Roman,sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: .14em;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  text-transform: uppercase;
+  top: 48px;
+  z-index: 5;
+}
+
+.IconRss:before {
+  content: "\e913";
+}
+
+
+.StoryType span:first-of-type{
+  margin-right: 5px !important;
+  background-position: -64px -143px !important;
+  content: "";
+  display: inline-block;
+  height: 16px !important;
+  width: 15px !important;
+  /* background-color: transparent;
+  background-image: url(../assets/icons/calendar.png);
+  background-repeat: no-repeat; */
+}
+
+.StoryType span {
+  display: inline-block;
+  line-height: 1.1;
+  position: relative;
+}
+
+.StoryBottomInfo {
+  bottom: 35px;
+  left: 15%;
+  pointer-events: none;
+  position: absolute;
+  right: 15%;
+  z-index: 4;
+}
+
+.StoryTitle, .StoryTitleEvent, .Story time{
+  color: #fff;
+  font-family: GoudyOldStyle;
+  font-size: 16px;
+  text-align: left;
+}
+
+.StoryFirstChar {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  float: left;
+  font-size: 52px;
+  height: 66px;
+  line-height: 66px;
+  margin: 0 20px 0 0;
+  padding-top: 0;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
+  -moz-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  width: 66px;
+}
+
+.StoryTitleEvent .StoryFirstChar i:first-of-type {
+  font-size: 38px;
+  letter-spacing: .06em;
+  line-height: 1;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+.StoryTitleEvent .StoryFirstChar {
+  font-size: 0;
+  line-height: normal;
+  padding-top: 0;
+  text-align: center;
+}
+
+.StoryTitleEvent .StoryFirstChar i {
+  display: inline-block;
+  margin: 0 3px;
+}
+
+.StoryTitleEvent .StoryFirstChar i:nth-of-type(2) {
+  font-size: 13px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.StoryTitleEvent span:nth-of-type(2), .StoryTitle span:nth-of-type(2) {
+  font-size: 24px;
+  line-height: 1.08;
+  display: block;
+  max-height: 230px;
+  overflow: hidden;
+  text-shadow: 4px 2px 7px rgba(0,0,0,.8);
+  overflow-wrap: break-word;
+}
+
+.StoryTitleEvent span:nth-of-type(3) {
+  display: block;
+  padding-top: 4px;
+}
+
+.StoryTitleEvent:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.StoryBottomRow {
+  margin-top: 7px;
+  padding-left: 86px;
+}
+
+.Story time {
+  display: inline-block;
+  margin-right: 13px;
+  vertical-align: middle;
+}
+
+.StoryViewLink {
+  margin: 0 20px 0 25px;
+}
+
+.StoryHoverLink {
+  color: transparent;
+  font-family: calibri,sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  pointer-events: none;
+  position: relative;
+  text-transform: capitalize;
+  -webkit-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
+  -moz-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  z-index: 1000;
+}
+
+.StoryHoverLink:hover {
+  color: #fff;
+  pointer-events: all;
+}
+
+.isEvents .StoryBottomRow time {
+  display: none;
+}
+
+@media screen and (max-width: 1250px) {
+  .StoryType {
+    font-size: 20px;
+  }
+
+  .StoryBottomInfo {
+    left: 12%;
+    right: 12%;
+  }
+
+  .StoryTitleEvent span:nth-of-type(2) {
+    font-size: 20px;
+    max-height: 200px;
+}
+}
+
+@media screen and (max-width: 1250px) {
+
+.StoryTitleEvent span:nth-of-type(2){
+  max-height: 200px;
+  font-size: 20px;
+}
+}
+
+@media screen and (max-width: 900px) {
+  .StoryType {
+    font-size: 17px;
+}
+
+.StoryTitleEvent span:nth-of-type(2){
+  max-height: 160px;
+}
+}
+
+@media screen and (max-width: 769px) {
+  .StoryType {
+    font-size: 12px;  
+  }
+
+  .StoryTitleEvent span:nth-of-type(2){
+    max-height: 117px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .StoryInner {
+    padding-bottom: 100%;
+}
+
+.StoryTitleEvent .StoryFirstChar{
+  height: 38px;
+  margin-right: 13px;
+  width: 38px;
+}
+
+.StoryTitleEvent .StoryFirstChar i:first-of-type{
+  font-size: 20px;
+  line-height: 1;
+}
+
+.StoryTitleEvent .StoryFirstChar i:nth-of-type(2) {
+  font-size: 9px;
+}
 }

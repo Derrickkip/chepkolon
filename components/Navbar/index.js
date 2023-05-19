@@ -1,24 +1,16 @@
-import React from "react";
-// nodejs library that concatenates strings
-import classnames from "classnames";
-// reactstrap components
-import {
-  Button,
-  Collapse,
-  NavbarBrand,
-  Navbar,
-  NavItem,
-  NavLink,
-  Nav,
-  Container
-} from "reactstrap";
+import React from 'react'
+import Image from 'next/image';
+import Link from 'next/link';
+import {useRouter} from 'next/router';
 
 import styles from './Navbar.module.css'
-
+import classNames from 'classnames'
 
 function IndexNavbar() {
-  const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
+    const [navbar, setNavbar] = React.useState("notScrolled");
   const [navbarCollapse, setNavbarCollapse] = React.useState(false);
+
+  const {pathname} = useRouter();
 
   const toggleNavbarCollapse = () => {
     setNavbarCollapse(!navbarCollapse);
@@ -31,12 +23,12 @@ function IndexNavbar() {
         document.documentElement.scrollTop > 299 ||
         document.body.scrollTop > 299
       ) {
-        setNavbarColor("");
+        setNavbar("");
       } else if (
         document.documentElement.scrollTop < 300 ||
         document.body.scrollTop < 300
       ) {
-        setNavbarColor('navbar-transparent');
+        setNavbar("notScrolled");
       }
     };
 
@@ -47,234 +39,224 @@ function IndexNavbar() {
     };
   });
   return (
-    <Navbar className={classnames(styles.Navbar ,"fixed-top", navbarColor)} expand="lg">
-            <div className="navbar-translate">
-                <NavbarBrand
-                    data-placement="bottom"
-                    href="/"
-                    title="chepkolon-schools"
-                    className={classnames(styles.NavbarBrand)}
-                >
-                    <p className={classnames(styles.Bold)}>CHEPKOLON SCHOOLS</p>
-                </NavbarBrand>
-                <button
-                    aria-expanded={navbarCollapse}
-                    className={classnames("navbar-toggler navbar-toggler", {
-                    toggled: navbarCollapse
-                    })}
-                    onClick={toggleNavbarCollapse}
-                >
-                    <span className={classnames(styles.NavbarTogglerBar, "navbar-toggler-bar bar1")} />
-                    <span className={classnames(styles.NavbarTogglerBar, "navbar-toggler-bar bar2")} />
-                    <span className={classnames(styles.NavbarTogglerBar, "navbar-toggler-bar bar3")} />
-                </button>
+    <header className={classNames(styles.Header, navbar=='notScrolled' ? '' : styles.IsSticky)}>
+      <div className={classNames(styles.HeaderTopNav, 'header-top', pathname === '/' ? 'hidden' : '')}>
+        <button className={classNames(styles.Burger, navbarCollapse ? styles.isActive : '')} onClick={toggleNavbarCollapse}>
+        <span className={classNames(styles.BurgerLine, styles.Default)}>
+            <i></i>
+          </span>
+          <span className={classNames(styles.BurgerLine, styles.Cross)}>
+            <i></i>
+            <i></i>
+          </span>
+          <em>menu</em>
+        </button>
+        <button className={classNames(styles.Burger, styles.ForSticky, navbarCollapse ? styles.isActive : '')} onClick={toggleNavbarCollapse}>
+          <span className={classNames(styles.BurgerLine, styles.Default)}>
+            <i></i>
+          </span>
+          <span className={classNames(styles.BurgerLine, styles.Cross)}>
+            <i></i>
+            <i></i>
+          </span>
+          <em>menu</em>
+        </button>
+        <div className={styles.TopLinksContainer}>
+          <div className={styles.BtnWithDropDown}>
+            <div className={classNames(styles.BtnWithDropDownHead, 'btnWithDropDownHead')} touch-info="0">
+              <a href="contact">contact&nbsp;</a>
+              <i></i>
             </div>
-            <Collapse
-            className={classnames(styles.NavbarCollapse, "justify-content-end")}
-            navbar
-            isOpen={navbarCollapse}
-            >
-            <Nav navbar>
-                <NavItem>
-                <NavLink
-                    href="/about-us/welcome"
-                    target="_blank"
-                    className={classnames(styles.NavbarLink)}
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 mr-2">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
-                    </svg>
-                    About Us
-                </NavLink>
-                </NavItem>
-                <NavItem>
-                <NavLink
-                    href="/"
-                    target="_blank"
-                    className={classnames(styles.NavbarLink)}
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 mr-2">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z" />
-                    </svg>
-                    Latest News
-                </NavLink>
-                </NavItem>
-                <NavItem>
-                <NavLink
-                    href="/"
-                    target="_blank"
-                    className={classnames(styles.NavbarLink)}
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 mr-2">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z" />
-                    </svg>
-                    Event Calendar
-                </NavLink>
-                </NavItem>
-                <NavItem>
-                <NavLink
-                    href="/"
-                    target="_blank"
-                    className={classnames(styles.NavbarLink)}
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 mr-2">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-                    </svg>
-                    Contact Us
-                </NavLink>
-                </NavItem>
-            </Nav>
-            </Collapse>
-    </Navbar>
-  );
+          </div>
+        </div>
+        <a href="home/" className={classNames(styles.HeaderStickyLogo)} title="chepkolon green highlands academy">
+          <Image src={require('../../assets/banner2.png')} alt="banner" />
+        </a>
+      </div>
+      <div className={classNames(styles.DesktopLogo,  pathname === '/' ? 'hidden' : '')}>
+        <Image src={require('../../assets/logo.jpg')} alt="logo"/>
+      </div>
+      <div className={classNames(styles.IntSchMenu, navbarCollapse ? styles.IsOpened : '')}>
+        <div className={styles.IntSchMenuOverflowArea}>
+          <div className={styles.IntSchMenuOverflowAreaInner}>
+            <div className={styles.IntSchMenuMenusWrapper}>
+              <div className={styles.FirstLevelNavigation}>
+                <div className={classNames(styles.IntSchMenuBtnsClone, styles.ForFirstLevel)}>
+                  <button className={classNames(styles.Burger, navbarCollapse ? styles.isActive : '')} onClick={toggleNavbarCollapse}>
+                    <span className={classNames(styles.BurgerLine, styles.Default)}>
+                      <i></i>
+                    </span>
+                    <span className={classNames(styles.BurgerLine, styles.Cross)}>
+                      <i></i>
+                      <i></i>
+                    </span>
+                    <span className={styles.BurgerLine}></span>
+                    <em>Close</em>
+                  </button>
+                  <div className={styles.TopLinksContainer}>
+                    <div className={styles.BtnWithDropDown}>
+                      <div className={classNames(styles.BtnWithDropDownHead, 'btnWithDropDownHead')} touch-info="0">
+                        <a href="contact">contact&nbsp;</a>
+                        <i></i>
+                      </div>
+                    </div>
+                    <a href="home/" className={classNames(styles.HomeBtn, 'homeBtn')} title="go to homepage" label="go to homepage"></a>
+                    <a href="contact/" className='mobileContact' title="go to contact page" label="go to contact page"></a>
+                  </div>
+                </div>
+                <div className={styles.TemplateMainMenuLinks}>
+                  <div className={styles.TemplateMainMenuLinksInner}>
+                    <ul>
+                      <li>
+                        <Link href='/cgha/welcome/'>
+                          <a onClick={toggleNavbarCollapse}>
+                            <span>Home</span>
+                          </a>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href='about-us/why-chepkolon'>
+                          <a onClick={toggleNavbarCollapse}>
+                            About Chepkolon
+                          </a>
+                        </Link>
+                        <div className={styles.MenuDisplayTable}>
+                          <div className={styles.MenuDisplayTableCell}>
+                            <div className={styles.MenuNavigateBack}>
+                              Back
+                            </div>
+                            <div className={styles.MenuNavigateBackWrapper}>
+                              <div className={styles.MenuCurrentSectionTitle}>
+                                <a href="about-us/">About Chepkolon</a>
+                              </div>
+                            </div>
+                            <ul>
+                              <li><a href="why-chepkolon/">Why Chepkolon?</a></li>
+                              <li><a href="headmasters-welcome/">Head Master&apos;s Welcome</a></li>
+                              <li><a href="vision/">Vision</a></li>
+                              <li><a href="history/">History</a></li>
+                              <li><a href="staff/">Staff</a></li>
+                              <li><a href="job-vacancies/">Job Vacancies</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <button type="button" className={classNames(styles.MenuBtnArrow, 'JsShowPanel')} title="open submenu" aria-label="open submenu">
+                          <Image src={require('../../assets/icons/icons8-down-arrow-50.png')} alt="arrow"/>
+                        </button>
+                      </li>
+                      <li>
+                        <Link href='/cgha/welcome/'>
+                          <a onClick={toggleNavbarCollapse}>
+                            <span>Admissions</span>
+                          </a>
+                        </Link>
+                        <button type="button" className={classNames(styles.MenuBtnArrow, 'JsShowPanel')} title="open submenu" aria-label="open submenu">
+                          <Image src={require('../../assets/icons/icons8-down-arrow-50.png')} alt="arrow"/>
+                        </button>
+                      </li>
+                      <li>
+                        <Link href='/cgha/welcome/'>
+                          <a onClick={toggleNavbarCollapse}>
+                            <span>Academic</span>
+                          </a>
+                        </Link>
+                        <button type="button" className={classNames(styles.MenuBtnArrow, 'JsShowPanel')} title="open submenu" aria-label="open submenu">
+                          <Image src={require('../../assets/icons/icons8-down-arrow-50.png')} alt="arrow"/>
+                        </button>
+                      </li>
+                      <li>
+                        <Link href='/cgha/welcome/'>
+                          <a onClick={toggleNavbarCollapse}>
+                            <span>Boarding</span>
+                          </a>
+                        </Link>
+                        <button type="button" className={classNames(styles.MenuBtnArrow, 'JsShowPanel')} title="open submenu" aria-label="open submenu">
+                          <Image src={require('../../assets/icons/icons8-down-arrow-50.png')} alt="arrow"/>
+                        </button>
+                      </li>
+                      <li>
+                        <Link href='/cgha/welcome/'>
+                          <a onClick={toggleNavbarCollapse}>
+                            <span>Pastoral</span>
+                          </a>
+                        </Link>
+                        <button type="button" className={classNames(styles.MenuBtnArrow, 'JsShowPanel')} title="open submenu" aria-label="open submenu">
+                          <Image src={require('../../assets/icons/icons8-down-arrow-50.png')} alt="arrow"/>
+                        </button>
+                      </li>
+                      <li>
+                        <Link href='/cgha/welcome/'>
+                          <a onClick={toggleNavbarCollapse}>
+                            <span>Co-Curricular</span>
+                          </a>
+                        </Link>
+                        <button type="button" className={classNames(styles.MenuBtnArrow, 'JsShowPanel')} title="open submenu" aria-label="open submenu">
+                          <Image src={require('../../assets/icons/icons8-down-arrow-50.png')} alt="arrow"/>
+                        </button>
+                      </li>
+                      <li>
+                        <Link href='/cgha/welcome/'>
+                          <a onClick={toggleNavbarCollapse}>
+                            <span>News and Events</span>
+                          </a>
+                        </Link>
+                        <button type="button" className={classNames(styles.MenuBtnArrow, 'JsShowPanel')} title="open submenu" aria-label="open submenu">
+                          <Image src={require('../../assets/icons/icons8-down-arrow-50.png')} alt="arrow"/>
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div className={classNames(styles.SecondLevelNavigation, 'second-level-navigation')}>
+                
+              </div>
+              <div className={styles.ThirdLevelNavigation}>
+                
+              </div>
+            </div>
+            <div className={classNames(styles.IntSchMenuExtraContent, 'extra-content')}>
+              <article className={styles.MenuPromos}>
+                <h2>Key Links</h2>
+                <div className={styles.MenuPromosContent}>
+                  <figure className={classNames(styles.Promo, 'promo')}>
+                    <a href="admissions/welcome" className={styles.PromoLink} title="Admissions" aria-label="link to admissions" touch-info="0">&nbsp;</a>
+                    <div className={styles.PromoImgWrapper}>
+                      <Image src={require("../../assets/assembly.jpg")} alt="admissions"></Image>
+                    </div>
+                    <figcaption>
+                      <h2>Admissions</h2>
+                    </figcaption>
+                  </figure>
+                  <figure className={classNames(styles.Promo, 'promo')}>
+                    <a href="boarding/welcome" className={styles.PromoLink} title="Boarding" aria-label="link to boarding" touch-info="0">&nbsp;</a>
+                    <div className={styles.PromoImgWrapper}>
+                      <Image src={require("../../assets/assembly2.jpg")} alt="boarding"></Image>
+                    </div>
+                    <figcaption>
+                      <h2>Boarding at Chepkolon</h2>
+                    </figcaption>
+                  </figure>
+                  <figure className={classNames(styles.Promo, 'promo')}>
+                    <a href="academics/welcome" className={styles.PromoLink} title="Academics" aria-label="link to academics" touch-info="0">&nbsp;</a>
+                    <div className={styles.PromoImgWrapper}>
+                      <Image src={require("../../assets/antoine-barres.jpg")} alt="admissions"></Image>
+                    </div>
+                    <figcaption>
+                      <h2>Academic Aims</h2>
+                    </figcaption>
+                  </figure>
+                </div>
+              </article>
+              <article className={styles.Connect}>
+
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  )
 }
 
-export default IndexNavbar;
-
-// import React from "react";
-// // nodejs library that concatenates strings
-// import classnames from "classnames";
-// // reactstrap components
-// import {
-//   Button,
-//   Collapse,
-//   NavbarBrand,
-//   Navbar,
-//   NavItem,
-//   NavLink,
-//   Nav,
-//   Container
-// } from "reactstrap";
-
-// import styles from './Navbar.module.css'
-
-// function IndexNavbar() {
-//   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
-//   const [navbarCollapse, setNavbarCollapse] = React.useState(false);
-
-//   const toggleNavbarCollapse = () => {
-//     setNavbarCollapse(!navbarCollapse);
-//     document.documentElement.classList.toggle("nav-open");
-//   };
-
-//   React.useEffect(() => {
-//     const updateNavbarColor = () => {
-//       if (
-//         document.documentElement.scrollTop > 299 ||
-//         document.body.scrollTop > 299
-//       ) {
-//         setNavbarColor("");
-//       } else if (
-//         document.documentElement.scrollTop < 300 ||
-//         document.body.scrollTop < 300
-//       ) {
-//         setNavbarColor("navbar-transparent");
-//       }
-//     };
-
-//     window.addEventListener("scroll", updateNavbarColor);
-
-//     return function cleanup() {
-//       window.removeEventListener("scroll", updateNavbarColor);
-//     };
-//   });
-//   return (
-//     <Navbar className={classnames(styles.Navbar ,"fixed-top", navbarColor)}  expand="lg" container="md">
-//       <Container>
-//         <div className="navbar-translate">
-//           <NavbarBrand
-//             data-placement="bottom"
-//             href="/index"
-//             target="_blank"
-//             title="Coded by Creative Tim"
-//           >
-//             Paper Kit React
-//           </NavbarBrand>
-//           <button
-//             aria-expanded={navbarCollapse}
-//             className={classnames("navbar-toggler navbar-toggler", {
-//               toggled: navbarCollapse
-//             })}
-//             onClick={toggleNavbarCollapse}
-//           >
-//             <span className="navbar-toggler-bar bar1" />
-//             <span className="navbar-toggler-bar bar2" />
-//             <span className="navbar-toggler-bar bar3" />
-//           </button>
-//         </div>
-//         <Collapse
-//           className="justify-content-end"
-//           navbar
-//           isOpen={navbarCollapse}
-//         >
-//           <Nav navbar>
-//             <NavItem>
-//               <NavLink
-//                 data-placement="bottom"
-//                 href="https://twitter.com/CreativeTim?ref=creativetim"
-//                 target="_blank"
-//                 title="Follow us on Twitter"
-//               >
-//                 <i className="fa fa-twitter" />
-//                 <p className="d-lg-none">Twitter</p>
-//               </NavLink>
-//             </NavItem>
-//             <NavItem>
-//               <NavLink
-//                 data-placement="bottom"
-//                 href="https://www.facebook.com/CreativeTim?ref=creativetim"
-//                 target="_blank"
-//                 title="Like us on Facebook"
-//               >
-//                 <i className="fa fa-facebook-square" />
-//                 <p className="d-lg-none">Facebook</p>
-//               </NavLink>
-//             </NavItem>
-//             <NavItem>
-//               <NavLink
-//                 data-placement="bottom"
-//                 href="https://www.instagram.com/CreativeTimOfficial?ref=creativetim"
-//                 target="_blank"
-//                 title="Follow us on Instagram"
-//               >
-//                 <i className="fa fa-instagram" />
-//                 <p className="d-lg-none">Instagram</p>
-//               </NavLink>
-//             </NavItem>
-//             <NavItem>
-//               <NavLink
-//                 data-placement="bottom"
-//                 href="https://www.github.com/CreativeTimOfficial/paper-kit-react?ref=creativetim"
-//                 target="_blank"
-//                 title="Star on GitHub"
-//               >
-//                 <i className="fa fa-github" />
-//                 <p className="d-lg-none">GitHub</p>
-//               </NavLink>
-//             </NavItem>
-//             <NavItem>
-//               <NavLink
-//                 href="https://demos.creative-tim.com/paper-kit-react/#/documentation?ref=pkr-index-navbar"
-//                 target="_blank"
-//               >
-//                 <i className="nc-icon nc-book-bookmark" /> Documentation
-//               </NavLink>
-//             </NavItem>
-//             <NavItem>
-//               <Button
-//                 className="btn-round"
-//                 color="danger"
-//                 href="https://www.creative-tim.com/product/paper-kit-pro-react?ref=pkr-index-navbar"
-//                 target="_blank"
-//               >
-//                 <i className="nc-icon nc-spaceship"></i> Upgrade to Pro
-//               </Button>
-//             </NavItem>
-//           </Nav>
-//         </Collapse>
-//       </Container>
-//     </Navbar>
-//   );
-// }
-
-// export default IndexNavbar;
+export default IndexNavbar

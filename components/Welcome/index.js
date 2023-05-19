@@ -23,13 +23,13 @@ const Welcome = () => {
                     <br/><br/>
                     Here, our children are motivated to learn and encouraged to participate in a wide range of enrichment activities so that they develop academically and emerge as fully-rounded,thoughtful and caring individuals.
                     <br/><br/>
-                    My aim is to provide every child with the experiences, knowledge and academic skills they need to become confident and ambitious adults.
+                    Our aim is to provide every child with the experiences, knowledge and academic skills they need to become confident and ambitious adults.
                     <br/><br/>
                      We want our young people to have every opportunity available to them so I am committed to encouraging them all to aim high and live their education.
                     <br/><br/>
                     We hope our website gives you and your child, or children, a real insight into the stimulating, exciting environment and the exceptional relationships that are a fundamental part of our community. 
                     <br/><br/>
-                    Of course, to truly understand that Chepkolon experience, you need to visit us, so please do get in touch with our 
+                    Of course, to truly understand that Chepkolon experience, you need to visit us, so please do get in touch with us.
                     </p>
                 </article>
             </div>

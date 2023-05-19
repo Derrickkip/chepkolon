@@ -1,7 +1,5 @@
-// import 'bootstrap/dist/css/bootstrap.css'
 import '../styles/design_tokens.css'
 import '../styles/utilities.css'
-import '../styles/paper_kit.css'
 import '../styles/globals.css'
 import Layout from '../components/layout'
 

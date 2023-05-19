@@ -13,6 +13,87 @@ import SectionCarousel from "../../components/carousel";
 
 import WelcomeCarousel from "../../components/Welcome/carousel";
 
+import NewsComponent from "../../components/News";
+
+const eventItems = {
+    isEvent: true,
+    title: {
+        h2: 'Upcoming',
+        h3: 'Events'
+    },
+    items: [
+        {
+            link: "storylink/",
+            src: require("../../assets/gate.jpg"),
+            alt: "alternative text",
+            storyType: "News",
+            storyTitle: "Green Highlands Visiting Day",
+            time: "09:00 - 16:00",
+            day: '05',
+            month: 'June'
+        },
+        {
+            link: "storylink/",
+            src: require("../../assets/assembly2.jpg"),
+            alt: "alternative text",
+            storyType: "News",
+            storyTitle: "Green Highlands Academic Day",
+            time: "10:00 - 15:00",
+            day: '23',
+            month: 'June'
+        },
+        {
+            link: "storylink/",
+            src: require("../../assets/class.jpg"),
+            alt: "alternative text",
+            storyType: "News",
+            storyTitle: "Green Highlands Parents Day",
+            time: "10:00 - 14:00",
+            day: '06',
+            month: 'July'
+        }
+    ]
+}
+
+const newsItems = {
+    title: {
+        h2: 'Chepkolon',
+        h3: 'News'
+    },
+    items: [
+        {
+            link: "storylink/",
+            src: require("../../assets/gate.jpg"),
+            alt: "alternative text",
+            storyType: "News",
+            storyTitle: "Green Highlands Visiting Day",
+            time: "05 | 06 | 2023",
+            day: '05',
+            month: 'June'
+        },
+        {
+            link: "storylink/",
+            src: require("../../assets/assembly2.jpg"),
+            alt: "alternative text",
+            storyType: "News",
+            storyTitle: "Green Highlands Academic Day",
+            time: "23 | 06 | 2023",
+            day: '23',
+            month: 'June'
+        },
+        {
+            link: "storylink/",
+            src: require("../../assets/class.jpg"),
+            alt: "alternative text",
+            storyType: "News",
+            storyTitle: "Green Highlands Parents Day",
+            time: "06 | 06 | 2023",
+            day: '06',
+            month: 'July'
+        }
+    ]
+}
+
 export default function GreenHighlands() {
     const [openTab, setOpenTab] = React.useState(1);
 
@@ -56,11 +137,15 @@ export default function GreenHighlands() {
                 </article>
                 <div className={styles.WelcomeSecondary}>
                     <div className={styles.WelcomeVideo}>
-
+                        {/* <p style={'display':'none'}></p> */}
+                        <div className={classNames(styles.VideoControlHolder, styles.WelcomeRatioPicture, styles.WelcomeVideoInner)}>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+        <NewsComponent newsItems={newsItems}/>
         <section className={styles.WhyChepkolon}>
             <div className={styles.WhyChepkolonContainer}>
                 <header className={styles.GptHeader}>
@@ -200,6 +285,7 @@ export default function GreenHighlands() {
                 </div>
             </div>
         </section>
+        <NewsComponent newsItems={eventItems}/>
         </>
     )
 }

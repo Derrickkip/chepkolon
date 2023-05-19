@@ -83,18 +83,76 @@
     margin-bottom: 16px;
 }
 
-@media screen and (max-width: 769px) {
-    .WelcomePrimary {
-        background: #fff;
-        float: none;
-        padding-left: 0;
-        padding-right: 0;
-        text-align: center;
-        width: 100%;
+.HeroText {
+    bottom: 135px;
+    left: 90px;
+    margin: 0 auto;
+    opacity: 1;
+    position: absolute;
+    right: 90px;
+    text-align: center;
+    z-index: 12;
+}
+
+.HeroText>div:first-of-type {
+    display: inline-block;
+    padding-bottom: 14px;
+    position: relative;
+}
+
+.HeroText h1 {
+    color: #fff;
+    font-family: Sorts Mill Goudy,Times New Roman,sans-serif;
+    position: relative;
+}
+
+.HeroText h1 small, .HeroText h1 strong {
+    font-weight: 400;
+    opacity: 1;
+    text-transform: uppercase;
+}
+
+.HeroText h1 small {
+    display: block;
+    font-size: 31px;
+    letter-spacing: .2em;
+    margin-bottom: 5px;
+}
+
+.HeroText h1 strong {
+    font-size: 70px;
+    letter-spacing: .1em;
+    line-height: 1;
+    margin-left: -.05em;
+}
+
+.HeroSmallText {
+    bottom: 35px;
+    color: #fff;
+    font-family: Sorts Mill Goudy,Times New Roman,sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: .02em;
+    line-height: 1.22;
+    max-width: 391px;
+    position: absolute;
+    right: 40px;
+    text-align: right;
+    z-index: 5;
+}
+
+@media screen and (max-width: 1500px) {
+    .HeroText h1 strong {
+        font-size: 63px;
     }
 
-    .Welcome .WelcomeInner {
-        padding: 0 20px;
+    .HeroText h1 small {
+        font-size: 27px;
+    }
+
+    .HeroText h1 strong {
+        font-size: 63px;
     }
 }
 
@@ -111,4 +169,68 @@
     .GhpHeader h3 {
         font-size: 35px;
     }
+
+    .HeroText {
+        bottom: 96px;
+    }
+
+    .HeroText h1 small {
+        font-size: 24px;
+    }
+
+    .HeroText h1 strong {
+        font-size: 59px;
+    }
+
+    .HeroSmallText {
+        font-size: 15px;
+        max-width: 310px;
+    }
 }
+
+
+
+@media screen and (max-width: 769px) {
+    .WelcomePrimary {
+        background: #fff;
+        float: none;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .Welcome .WelcomeInner {
+        padding: 0 20px;
+    }
+
+    .HeroText {
+        bottom: 140px;
+        left: 20px;
+        right: 20px;
+        text-align: center;
+    }
+
+    .HeroText>div:first-of-type {
+        padding-bottom: 0;
+    }
+
+    .HeroText h1 small {
+        font-size: 15px;
+    }
+
+    .HeroText h1 strong {
+        font-size: 40px;
+    }
+
+    .HeroSmallText {
+        bottom: 89px;
+        font-size: 14px;
+        left: 10px;
+        margin: auto;
+        max-width: 300px;
+        right: 10px;
+        text-align: center;
+    }
+}
+

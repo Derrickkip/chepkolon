@@ -1,165 +1,1023 @@
-.Navbar {
-    border: 0;
+.HeaderTopNav, .HeaderTopNav:before {
+  left: 0;
+  right: 0;
+  top: 0;
+  -webkit-transition: .2s ease-in-out;
+  -o-transition: .2s ease-in-out;
+  -moz-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.HeaderTopNav {
+  -webkit-box-shadow: 2px 2px 0 0 transparent;
+  -moz-box-shadow: 2px 2px 0 0 transparent;
+  box-shadow: 2px 2px 0 0 transparent;
+  height: 80px;
+  padding: 0 38px;
+  position: fixed;
+  z-index: 20;
+}
+
+.HeaderTopNav:before {
+  background: #fff;
+  content: "";
+  height: 0;
+  position: absolute;
+}
+
+.Header.IsSticky .HeaderTopNav, body.media-template .header__topNav {
+  -webkit-box-shadow: 2px 2px 16px 0 rgba(0,0,0,.1);
+  -moz-box-shadow: 2px 2px 16px 0 rgba(0,0,0,.1);
+  box-shadow: 2px 2px 16px 0 rgba(0,0,0,.1);
+  -webkit-transition: .2s ease-in-out;
+  -o-transition: .2s ease-in-out;
+  -moz-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.Header.IsSticky .HeaderTopNav:after, .Header.IsSticky .HeaderTopNav:before, body.media-template .header__topNav:after, body.media-template .header__topNav:before {
+  height: 80px;
+  -webkit-transition: .2s ease-in-out;
+  -o-transition: .2s ease-in-out;
+  -moz-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.Header.IsSticky .HeaderTopNav .Burger:not(.ForSticky), body.media-template .header__topNav .burger:not(.forSticky) {
+  display: none;
+}
+
+.Header.IsSticky .HeaderTopNav .Burger.ForSticky, body.media-template .header__topNav .burger.forSticky {
+  display: block;
+}
+
+.HeaderTopNav .Burger {
+  left: 36px;
+  position: absolute;
+  top: 40px;
+}
+
+.Burger {
+  border: 1px solid hsla(39,46%,71%,.2);
+  color: hsla(0,0%,100%,.6);
+  height: 46px;
+  outline: 1px solid hsla(39,46%,71%,.2);
+  outline-offset: 2px;
+  -webkit-transition: .2s ease-in-out;
+  -o-transition: .2s ease-in-out;
+  -moz-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  width: 46px;
+  z-index: 22;
+}
+
+.Burger.ForSticky {
+  color: #a46e08;
+  display: none;
+  top: 16px;
+}
+
+.BurgerLine {
+  height: 16px;
+  left: 50%;
+  margin: -8px 0 0 -20px;
+  position: absolute;
+  top: 50%;
+  width: 40px;
+}
+
+.BurgerLine.Default i {
+  background: currentColor;
+  height: 1px;
+  left: 50%;
+  margin: -1px 0 0 -20px;
+  position: absolute;
+  top: 50%;
+  -webkit-transition: .2s ease-in-out;
+  -o-transition: .2s ease-in-out;
+  -moz-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  -webkit-transition-delay: .525s;
+  -moz-transition-delay: .525s;
+  -o-transition-delay: .525s;
+  transition-delay: .525s;
+  width: 40px;
+}
+
+.Burger.isActive .BurgerLine.Default i {
+  -webkit-transition-delay: .1s;
+  -moz-transition-delay: .1s;
+  -o-transition-delay: .1s;
+  transition-delay: .1s;
+  width: 0;
+}
+
+.Burger.isActive .BurgerLine.Cross i:first-of-type {
+  height: 100%;
+  -webkit-transition-delay: .55s;
+  -moz-transition-delay: .55s;
+  -o-transition-delay: .55s;
+  transition-delay: .55s;
+}
+
+.Burger.isActive .BurgerLine.Cross i:last-of-type {
+  -webkit-transition-delay: .3s;
+  -moz-transition-delay: .3s;
+  -o-transition-delay: .3s;
+  transition-delay: .3s;
+  width: 100%;
+}
+
+.BurgerLine.Default i:after, .BurgerLine.Default i:before {
+  background: currentColor;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  -webkit-transition: .2s ease-in-out;
+  -o-transition: .2s ease-in-out;
+  -moz-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  width: 100%;
+}
+
+.BurgerLine.Default i:before {
+  top: -8px;
+  -webkit-transition-delay: .4s;
+  -moz-transition-delay: .4s;
+  -o-transition-delay: .4s;
+  transition-delay: .4s;
+}
+
+.BurgerLine.Default i:after {
+  top: 8px;
+  -webkit-transition-delay: .6s;
+  -moz-transition-delay: .6s;
+  -o-transition-delay: .6s;
+  transition-delay: .6s;
+  width: 100%;
+}
+
+.BurgerLine.Cross {
+  height: 30px;
+  margin: -15px 0 0 -15px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 30px;
+}
+
+.Burger em {
+  color: #fff;
+  display: inline-block;
+  font-family: Sorts Mill Goudy,Times New Roman,sans-serif;
+  font-size: 24px;
+  letter-spacing: .2em;
+  line-height: 46px;
+  padding-left: 55px;
+  padding-top: 2px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.Burger.ForSticky em {
+  color: #a46e08;
+}
+
+.BurgerLine.Cross i:first-of-type {
+  background: #ae8f55;
+  bottom: auto;
+  display: block;
+  height: 0;
+  left: 50%;
+  margin-left: -1px;
+  position: absolute;
+  top: 0;
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  transition-delay: 0s;
+  -webkit-transition: .2s ease-in-out;
+  -o-transition: .2s ease-in-out;
+  -moz-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  width: 1px;
+}
+
+.BurgerLine.Cross i:last-of-type {
+  background: #ae8f55;
+  bottom: auto;
+  display: block;
+  height: 1px;
+  left: 0;
+  margin-top: -1px;
+  position: absolute;
+  right: auto;
+  top: 50%;
+  -webkit-transition-delay: .2s;
+  -moz-transition-delay: .2s;
+  -o-transition-delay: .2s;
+  transition-delay: .2s;
+  -webkit-transition: .2s ease-in-out;
+  -o-transition: .2s ease-in-out;
+  -moz-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  width: 0;
+}
+
+.TopLinksContainer {
+  margin-top: 50px;
+  padding-left: 200px;
+  position: relative;
+  z-index: 2;
+}
+
+.Header.IsSticky .HeaderTopNav .TopLinksContainer, body.media-template .header__topNav .topLinksContainer {
+  margin-top: 26px;
+}
+
+.BtnWithDropDown {
+  display: inline-block;
+  position: relative;
+}
+
+.BtnWithDropDownHead {
+  position: relative;
+  z-index: 5;
+}
+
+.BtnWithDropDownHead a {
+  color: #fff;
+  font-family: Sorts Mill Goudy,Times New Roman,sans-serif;
+  font-size: 18px;
+  letter-spacing: .06em;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.Header.IsSticky .HeaderTopNav .BtnWithDropDown.IsPortals .BtnWithDropDownHead a, .Header.IsSticky .HeaderTopNav .BtnWithDropDown:not(.isOpened) .BtnWithDropDownHead a, body.media-template .header__topNav .btnWithDropDown.isPortals .btnWithDropDown__head a, body.media-template .header__topNav .btnWithDropDown:not(.isOpened) .btnWithDropDown__head a {
+  color: #000;
+}
+
+.BtnWithDropDownHead i {
+  display: inline-block;
+  height: 20px;
+  margin-left: -6px;
+  position: relative;
+  right: -3px;
+  top: 3px;
+  width: 20px;
+}
+
+.BtnWithDropDownHead i:after, .BtnWithDropDownHead i:before {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+  -moz-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+}
+
+.BtnWithDropDownHead i:before {
+  opacity: 0;
+}
+
+.DesktopLogo {
+  /* display: block; */
+  max-width: 187px;
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  z-index: 21;
+}
+
+.HeaderStickyLogo {
+  max-width: 250px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 40px;
+  top: 9px;
+  z-index: 2;
+}
+
+.Header.IsSticky .HeaderStickyLogo, body.media-template .header__stickyLogo {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.HeaderStickyLogo span {
+  width: 100%;
+}
+
+.IntSchMenu {
+  background: #fff;
+  display: none;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 22;
+}
+
+.IntSchMenu.IsOpened {
+  display: block;
+}
+
+.IntSchMenuMenusWrapper {
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 50%;
+  z-index: 3;
+  min-height: 668px;
+}
+
+.IntSchMenuMenusWrapper>* {
+  pointer-events: all;
+}
+
+.IntSchMenu .FirstLevelNavigation {
+  border-right: 1px solid #f3eee6;
+  left: 0;
+  -webkit-transition: .2s ease-in-out;
+  -o-transition: .2s ease-in-out;
+  -moz-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  width: 100%;
+  z-index: 5;
+}
+
+.IntSchMenu .FirstLevelNavigation, .IntSchMenu .SecondLevelNavigation, .IntSchMenu .ThirdLevelNavigation, .MenuPanelsCommon {
+  background: #fff;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.IntSchMenu .FirstLevelNavigation:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  margin-left: -.25em;
+  vertical-align: middle;
+}
+
+.IntSchMenuBtnsClone {
+  left: 38px;
+  position: absolute;
+  top: 40px;
+  z-index: 5;
+}
+
+.Header.IsSticky .IntSchMenuBtnsClone {
+  top: 17px;
+}
+
+.IntSchMenuBtnsClone .Burger {
+  border: 0;
+  display: inline-block;
+  outline: 0;
+  position: relative;
+  vertical-align: middle;
+}
+
+.IntSchMenuBtnsClone .Burger em {
+  color: #000;
+}
+
+.IntSchMenuBtnsClone .TopLinksContainer {
+  display: inline-block;
+  margin-top: 0;
+  padding-left: 150px;
+  vertical-align: middle;
+}
+
+.IntSchMenuBtnsClone .BtnWithDropDown .BtnWithDropDownHead a {
+  color: #acacac;
+}
+
+.dsa-LG_ISC_triangleDownGray:after, .IntSchMenuBtnsClone .BtnWithDropDown .BtnWithDropDownHead i:after {
+  background-position: -151px -117px;
+  content: "";
+  display: inline-block;
+  height: 7px;
+  width: 11px;
+}
+
+.IntSchMenu .FirstLevelNavigation .TemplateMainMenuLinks {
+  display: inline-block;
+  padding: 30px 135px 0 175px;
+  vertical-align: middle;
+  width: 98%;
+}
+
+.IntSchMenu .FirstLevelNavigation .TemplateMainMenuLinks .TemplateMainMenuLinksInner>ul {
+  display: block;
+}
+
+.IntSchMenu .FirstLevelNavigation .TemplateMainMenuLinks .TemplateMainMenuLinksInner>ul>li {
+  display: block;
+  position: relative;
+}
+
+.IntSchMenu .FirstLevelNavigation .TemplateMainMenuLinks .TemplateMainMenuLinksInner>ul>li>a:hover {
+  color: #a46e08;
+}
+
+.IntSchMenu .FirstLevelNavigation .TemplateMainMenuLinks .TemplateMainMenuLinksInner>ul>li>a, .intSchMenu .intSchMenu__accSl>div>ul>li>a, .intSchMenu .intSchMenu__accThird>div>ul>li>a, .IntSchMenu .SecondLevelNavigation>.MenuDisplayTable>.MenuDisplayTableCell>ul>li>a, .IntSchMenu .ThirdLevelNavigation .MenuDisplayTable .MenuDisplayTableCell ul li a, .menuLinksCommon {
+  color: #000;
+  display: block;
+  font-family: Sorts Mill Goudy,Times New Roman,sans-serif;
+  font-weight: 400;
+  -webkit-transition: .2s ease-in-out;
+  -o-transition: .2s ease-in-out;
+  -moz-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.IntSchMenu .FirstLevelNavigation .TemplateMainMenuLinks .TemplateMainMenuLinksInner>ul>li>a, .menufirstLvlLinks {
+  font-family: Sorts Mill Goudy,Times New Roman,sans-serif;
+  font-size: 28px;
+  letter-spacing: .08em;
+  padding: 10px 90px 10px 0;
+  text-transform: uppercase;
+}
+
+.IntSchMenu .FirstLevelNavigation .TemplateMainMenuLinks .TemplateMainMenuLinksInner>ul>li>a:active, .IntSchMenu .FirstLevelNavigation .TemplateMainMenuLinks .TemplateMainMenuLinksInner>ul>li>a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+.IntSchMenu .FirstLevelNavigation .TemplateMainMenuLinks .TemplateMainMenuLinksInner>ul>li>a.current, .intSchMenu .intSchMenu__accSl>div>ul>li>a.current, .intSchMenu .intSchMenu__accThird>div>ul>li>a.current, .intSchMenu .second-level-navigation>.menu-display-table>.menu-display-table-cell>ul>li>a.current, .intSchMenu .third-level-navigation .menu-display-table .menu-display-table-cell ul li a.current, .menuLinksCommon.current {
+  color: #a46e08;
+}
+
+.IntSchMenuMenusWrapper.FirstActive .SecondLevelNavigation, .IntSchMenuMenusWrapper.FirstActive .ThirdLevelNavigation {
+  z-index: 1;
+}
+
+.IntSchMenuExtraContent {
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 50%;
+  z-index: 2;
+}
+
+.IntSchMenuExtraContent:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  margin-left: -.025em;
+  vertical-align: middle;
+}
+
+.MenuPromos {
+  display: inline-block;
+  margin: 0 auto;
+  max-width: 450px;
+  padding: 200px 0;
+  text-align: center;
+  vertical-align: middle;
+  width: 65%;
+}
+
+.MenuPromos>h2 {
+  color: #9d6513;
+  font-family: Sorts Mill Goudy,Times New Roman,sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: .1em;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.MenuPromosContent {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.Promo {
+  -webkit-box-shadow: 0 8px 20px 0 rgba(0,0,0,.15);
+  -moz-box-shadow: 0 8px 20px 0 rgba(0,0,0,.15);
+  box-shadow: 0 8px 20px 0 rgba(0,0,0,.15);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 90px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+}
+
+.MenuPromos .Promo {
+  margin-bottom: 20px;
+}
+
+.PromoLink {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.PromoImgWrapper {
+  min-height: 90px;
+  overflow: hidden;
+  position: relative;
+  width: 37%;
+}
+
+.PromoImgWrapper span {
+  height: 100% !important;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+}
+
+.PromoImgWrapper .ObjectFitFallback, .PromoImgWrapper img {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition: .2s ease-in-out;
+  -o-transition: .2s ease-in-out;
+  -moz-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.Promo figcaption {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 28px 20px 23px;
+  position: relative;
+  text-align: left;
+}
+
+.Promo figcaption h2 {
+  color: #a46e08;
+  font-family: Sorts Mill Goudy,Times New Roman,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: .08em;
+  line-height: 1.13;
+  text-transform: uppercase;
+  -webkit-transition: .2s ease-in-out;
+  -o-transition: .2s ease-in-out;
+  -moz-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.MenuPromos .Promo h2 {
+  font-size: 16px;
+}
+
+.IntSchMenuBtnsClone .HomeBtn {
+  display: none;
+  height: 40px;
+  position: relative;
+  vertical-align: middle;
+  width: 48px;
+}
+
+.IntSchMenuBtnsClone .HomeBtn:after {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.IntSchMenuBtnsClone .HomeBtn:after {
+  background-color: transparent;
+  background-image: url(../../assets/icons/technology.png);
+  background-repeat: no-repeat;
+  -moz-background-size: 220px 159px;
+  background-size: 220px 159px;
+}
+
+.IntSchMenu .FirstLevelNavigation .TemplateMainMenuLinks .TemplateMainMenuLinksInner .MenuDisplayTable {
+  display: none;
+}
+
+.IntSchMenu .FirstLevelNavigation .TemplateMainMenuLinks .TemplateMainMenuLinksInner>ul>li div {
+  position: relative;
+}
+
+.MenuNavigateBack {
+  color: #a46e08;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Sorts Mill Goudy,Times New Roman,sans-serif;
+  font-size: 16px;
+  letter-spacing: .08em;
+  position: relative;
+  text-transform: uppercase;
+  z-index: 5;
+}
+
+.MenuNavigateBack:before {
+  left: -30px;
+  position: absolute;
+  top: 4px;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  -moz-transition: .2s;
+  transition: .2s;
+}
+
+.dsa-LG_ISC_menuArrowBack:after, .dsb-LG_ISC_menuArrowBack:before, .MenuNavigateBack:before {
+  background-position: -137px -102px;
+  content: "";
+  display: inline-block;
+  height: 11px;
+  width: 22px;
+}
+
+.MenuNavigateBackWrapper {
+  border-bottom: 1px solid rgba(164,110,8,.3);
+  cursor: pointer;
+  display: none;
+  margin-left: -20px;
+  margin-right: -25px;
+  margin-top: 20px;
+  padding-bottom: 5px;
+  position: relative;
+}
+
+.MenuNavigateBackWrapper .MenuCurrentSectionTitle {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.MenuNavigateBackWrapper .MenuCurrentSectionTitle a {
+  color: #a46e08;
+  font-family: Sorts Mill Goudy,Times New Roman,sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: .1em;
+  pointer-events: none;
+  text-transform: uppercase;
+}
+
+.IntSchMenu .SecondLevelNavigation>.MenuDisplayTable>.MenuDisplayTableCell>ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0 25px;
+  position: relative;
+}
+
+.IntSchMenu .SecondLevelNavigation>.MenuDisplayTable>.MenuDisplayTableCell>ul>li {
+  display: block;
+  padding-right: 20px;
+  position: relative;
+}
+
+.IntSchMenu .SecondLevelNavigation {
+  background: url(../../assets/menuPanelBg.png) no-repeat top/cover;
+  border-right: 1px solid #f3eee6;
+  -webkit-box-shadow: -10px 10px 20px 0 rgba(0,0,0,.2);
+  -moz-box-shadow: -10px 10px 20px 0 rgba(0,0,0,.2);
+  box-shadow: -10px 10px 20px 0 rgba(0,0,0,.2);
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
+  -moz-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  width: 82%;
+}
+
+.IntSchMenu .SecondLevelNavigation:after {
+  background: rgba(0,0,0,.2);
+  bottom: 0;
+  content: "";
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: .2s ease-in-out;
+  -o-transition: .2s ease-in-out;
+  -moz-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  z-index: -1;
+}
+
+.IntSchMenuMenusWrapper.FirstActive .SecondLevelNavigation, .IntSchMenuMenusWrapper.FirstActive .ThirdLevelNavigation {
+  z-index: 1;
+}
+
+.MenuBtnArrow.JsShowPanel {
+  margin-top: -23px;
+  right: -20px;
+  top: 50%;
+}
+
+.MenuBtnArrow {
+  height: 40px;
+  position: absolute;
+  -webkit-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
+  -moz-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  width: 48px;
+  margin-top: -23px;
+  right: -20px;
+  top: 50%;
+}
+
+.MenuBtnArrow:after, .MenuBtnArrow:before {
+  bottom: 0;
+  margin: auto;
+  right: 0;
+}
+
+.MenuBtnArrow:before {
+  opacity: 1;
+}
+
+.MenuBtnArrow:after, .MenuBtnArrow:before {
+  left: 0;
+  position: absolute;
+  top: 0;
+  -webkit-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+  -moz-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+}
+
+.dsa-LG_ISC_menuArrow-hover:after, .dsb-LG_ISC_menuArrow-hover:before, .MenuBtnArrow:before {
+  background-position: -167px -147px;
+  content: "";
+  display: inline-block;
+  height: 11px;
+  width: 22px;
+}
+
+.MenuBtnArrow:after{
+  background-color: transparent;
+  background-image: url(../../assets/icons/right-arrow/icons8-arrow-64.png);
+  background-repeat: no-repeat;
+}
+
+
+@media screen and (min-width: 1024px) and (max-width: 1590px){
+  .IntSchMenu .FirstLevelNavigation .TemplateMainMenuLinks {
+    padding: 20px 85px 0 90px;
+  }
+}
+
+@media screen and (max-width: 1590px) {
+  .IntSchMenu .FirstLevelNavigation .TemplateMainMenuLinks .TemplateMainMenuLinksInner>ul>li>a {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .Burger em {
+    font-size: 21px;
+  }
+
+  .TopLinksContainer {
+    margin-top: 49px;
+    padding-left: 190px;
+  }
+
+  .BtnWithDropDown .BtnWithDropDownHead a {
+    font-size: 16px;
+  }
+
+  .DesktopLogo {
+    max-width: 150px;
+}
+}
+
+@media screen and (max-width: 1250px) {
+  .Burger {
+    height: 38px;
+    width: 38px;
+  }
+
+  .Header.IsSticky .HeaderTopNav .Burger, body.media-template .header__topNav .burger {
+    top: 21px;
+  }
+
+  .BurgerLine {
+    margin: -8px 0 0 -15px;
+    width: 30px;
+  }
+
+  .Burger em {
+    font-size: 18px;
+    line-height: 38px;
+    padding-left: 46px;
+    padding-top: 1px;
+  }
+
+  .BurgerLine.Default i:before {
+    top: -6px;
+  }
+
+  .BurgerLine.Default i:after {
+    top: 6px;
+  }
+
+.BurgerLine.Default i {
+  margin: -1px 0 0 -15px;
+  width: 30px;
+}
+
+  .topLinksContainer {
+    margin-top: 43px;
+    padding-left: 160px;
+  }
+
+  .Header.IsSticky .HeaderTopNav .TopLinksContainer, body.media-template .header__topNav .topLinksContainer {
+    margin-top: 25px;
+  }
+
+  .BtnWithDropDown .BtnWithDropDownHead a {
     font-size: 14px;
-    transition: all 0.4s;
-    -webkit-transition: all 0.4s;
-    padding: 0;
-    background: #338d33;
-    color: #ffffff;
-    box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15);
   }
 
+  .Header.IsSticky .HeaderTopNav .HeaderStickyLogo, body.media-template .header__topNav .header__stickyLogo {
+    right: 25px;
+}
+}
 
-  
-  .NavbarTransparent {
-    background: transparent !important;
-    padding-top: 25px;
-    box-shadow: none;
-  }
-  
-  .NavbarBrand {
-    color: #ffffff !important;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .Bold {
-    font-weight: 800;
-  }
-  
-  .NavbarLink {
-    line-height: 1.6;
-    margin: 15px 3px;
-    padding: 10px 15px;
-    opacity: 0.8;
-    font-size: 12px;
-    text-transform: uppercase;
-    font-weight: 600;
-    /* color: #338d33 !important; */
-    color: #ffffff !important;
-    display: flex;
-  }
-
-  .NavbarCollapse {
-    color: #338d33;
-  }
-
-
-  /* .NavbarTranslate {
+@media screen and (max-width: 1024px) {
+  .IntSchMenuOverflowArea {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
     width: 100%;
-    position: relative;
-    display: flex;
-    -ms-flex-pack: justify !important;
-    justify-content: space-between !important;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -o-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0);
-    -webkit-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
-    -moz-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
-    -o-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
-    -ms-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
-    transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
-  } */
+}
 
-  /*
-
-  .NavbarToggler {
-    display: block;
-    margin-top: 20px;
+  .IntSchMenuOverflowAreaInner {
+    height: 100%;
+    min-height: 680px;
+    position: absolute;
+    width: 100%;
   }
 
-  .NavbarTogglerBar {
-    background: #ffffff !important;
-    display: block;
+  .IntSchMenuOverflowArea, .IntSchMenuOverflowAreaInner {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+  .DesktopLogo {
+    max-width: 110px; 
+  }
+
+  .IntSchMenuMenusWrapper {
+    height: auto;
+    min-height: auto!important;
     position: relative;
-    width: 24px;
-    height: 2px;
-    border-radius: 1px;
-    margin: 0 auto;
+    width: 100%;
   }
-  
-  /* .navbar-toggle .icon-bar {
-    display: block;
+
+  .IntSchMenu .FirstLevelNavigation {
+    height: 100%;
+    overflow: visible!important;
+    padding-top: 54px;
     position: relative;
-    background: #fff;
-    width: 24px;
-    height: 2px;
-    border-radius: 1px;
-    margin: 0 auto;
+    width: 100%;
   }
-  .navbar-header .navbar-toggle {
-    margin-top: 12px;
-    width: 40px;
-    height: 40px;
+
+  .IntSchMenuBtnsClone {
+    right: 17px;
   }
-  
-  .bar1,
-  .bar2,
-  .bar3 {
-    outline: 1px solid transparent;
-  } */
+
+  .IntSchMenuBtnsClone .TopLinksContainer {
+    padding-left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+  .IntSchMenu .FirstLevelNavigation .TemplateMainMenuLinks {
+    margin-top: 0;
+    max-width: 100%;
+    padding: 30px 20px;
+    width: 100%;
+  }
+
+  .IntSchMenu .IntSchMenuExtraContent {
+    height: auto;
+    position: relative;
+    width: 100%;
+}
+
+.MenuPromos {
+  display: block;
+  padding: 50px 0;
+}
+
+.IntSchMenuBtnsClone .HomeBtn, .IntSchMenuBtnsClone .MobileContact, .IntSchMenuBtnsClone .SearchLink {
+  display: inline-block;
+}
+
+  .Header.IsSticky .HeaderTopNav .HeaderStickyLogo, body.media-template .HeaderTopNav .HeaderStickyLogo {
+    max-width: 280px;
+    top: 15px;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .DesktopLogo {
+    max-width: 96px;
+}
+
+.Header.IsSticky .HeaderTopNav .HeaderStickyLogo, body.media-template .HeaderTopNav .HeaderStickyLogo {
+  max-width: 200px;
+  top: 22px;
+}
+}
 
 @media screen and (max-width: 769px) {
-    .NavbarLink {
-        color:  #338d33 !important;
-    }
-/*
-    .NavbarCollapse {
-        position: fixed;
-        display: block;
-        top: 0;
-        height: 100%;
-        width: 230px;
-        right: 0px;
-        z-index: 1032;
-        visibility: visible;
-        background-color: #999;
-        overflow-y: visible;
-        border-top: none;
-        text-align: left;
-        border-left: 1px solid #ccc5b9;
-        padding-right: 0px;
-        padding-left: 40px;
-        padding-top: 15px;
-        -webkit-transform: translateX(230px);
-        -moz-transform: translateX(230px);
-        -o-transform: translateX(230px);
-        -ms-transform: translateX(230px);
-        transform: translateX(230px);
-        -webkit-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
-        -moz-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
-        -o-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
-        -ms-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
-        transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
-    } */
+  .HeaderTopNav .Burger {
+    left: 23px;
+    position: absolute;
+    top: 25px;
+  }
 
-    /* .NavbarCollapse ul {
-        position: relative;
-        z-index: 3;
-        height: 95%;
-      }
+  .Burger:not(.ForSticky) {
+    border: 1px solid hsla(0,0%,100%,.5);
+    outline: 1px solid hsla(0,0%,100%,.5);
+  }
 
-    .NavbarCollapse::after {
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        background-color: #fffcf5;
-        background-image: linear-gradient(
-          to bottom,
-          rgba(0, 0, 0, 0) 0%,
-          rgba(112, 112, 112, 0) 60%,
-          rgba(186, 186, 186, 0.15) 100%
-        );
-        display: block;
-        content: "";
-        z-index: 1;
-      } */
-  
-} 
+  .TopLinksContainer {
+    display: none;
+  }
+
+  .Burger em {
+    display: none;
+}
+
+.DesktopLogo {
+  left: 50%;
+  margin-left: -48px;
+  right: auto;
+  top: 12px;
+}
+
+.IntSchMenuBtnsClone {
+  left: 22px;
+  top: 25px;
+}
+
+.MenuPromos {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+}
+
+.BtnWithDropDown {
+  display: none;
+}
+}
