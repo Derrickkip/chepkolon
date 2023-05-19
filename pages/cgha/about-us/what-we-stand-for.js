@@ -20,7 +20,7 @@ export default function About() {
             <div className='hero-images-area'>
                 <div className='hero-images-area-inner'>
                     <div>
-                        <Image src={require('../../assets/assembly2.jpg')} alt="director" style={{position: "absolute", top: '-34px', left: '0px', width: '1254px', height: '836px', opacity: '1'}}/>
+                        <Image src={require('../../../assets/assembly2.jpg')} alt="director" style={{position: "absolute", top: '-34px', left: '0px', width: '1254px', height: '836px', opacity: '1'}}/>
                     </div>
                 </div>
             </div>
