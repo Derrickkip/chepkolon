@@ -108,8 +108,8 @@ function IndexNavbar() {
                   <div className={styles.TemplateMainMenuLinksInner}>
                     <ul>
                       <li>
-                        <Link href='/cgha/welcome/'>
-                          <a onClick={toggleNavbarCollapse}>
+                        <Link href='/cgha/welcome'>
+                          <a onClick={toggleNavbarCollapse} className={pathname == '/cgha/welcome' ? styles.IsActive : ''}>
                             <span>Home</span>
                           </a>
                         </Link>

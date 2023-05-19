@@ -70,16 +70,16 @@ const NewsComponent = (newsItems) => {
             responsive={responsive}
             ssr={true} // means to render carousel on server-side.
             infinite={true}
+            autoPlay={false}
             autoPlaySpeed={5000}
             keyBoardControl={true}
             customTransition="all .5"
             arrows={true}
-            transitionDuration={5000}
+            transitionDuration={500}
             containerClass="carousel-container"
-            // deviceType={this.props.deviceType}
+            removeArrowOnDeviceType={[]}
             dotListClass="custom-dot-list-style"
             itemClass="carousel-item-padding-40-px"
-            // partialVisible={true}
             centerMode={width < 580 ? false : true}
           >
              {

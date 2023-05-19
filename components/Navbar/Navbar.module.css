@@ -436,7 +436,7 @@
 }
 
 .IntSchMenu .FirstLevelNavigation .TemplateMainMenuLinks .TemplateMainMenuLinksInner>ul>li>a, .intSchMenu .intSchMenu__accSl>div>ul>li>a, .intSchMenu .intSchMenu__accThird>div>ul>li>a, .IntSchMenu .SecondLevelNavigation>.MenuDisplayTable>.MenuDisplayTableCell>ul>li>a, .IntSchMenu .ThirdLevelNavigation .MenuDisplayTable .MenuDisplayTableCell ul li a, .menuLinksCommon {
-  color: #000;
+  color: #a46e08;
   display: block;
   font-family: Sorts Mill Goudy,Times New Roman,sans-serif;
   font-weight: 400;
@@ -476,6 +476,10 @@
   top: 0;
   width: 50%;
   z-index: 2;
+}
+
+.IsActive {
+  color: #9d6513 !important;
 }
 
 .IntSchMenuExtraContent:before {

@@ -422,6 +422,10 @@ body.profileC body:not(.sharedTemplates) .content-area .main-content .faqs, body
     width: 6px;
 }
 
+.IsActive {
+    color: #9d6513 !important;
+}
+
 .ContentArea .MobileCloneFromSidebar {
     display: none;
     padding: 0 20px;

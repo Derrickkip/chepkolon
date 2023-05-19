@@ -1,11 +1,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import {useRouter} from 'next/router';
 
 import styles from './AboutUs.module.css'
 
 import classNames from 'classnames';
 
 export default function About() {
+    const {pathname} = useRouter();
     return (
         <>
         <section className={styles.SlHero}>
@@ -44,33 +46,33 @@ export default function About() {
                     </header>
                     <ul className={styles.SubMenu}>
                         <li>
-                            <Link href ="/cgha/about-us/why-chepkolon/">
-                                <a >Why Chepkolon</a>
+                            <Link href ="/cgha/about-us/why-chepkolon">
+                                <a className={pathname == "/cgha/about-us/why-chepkolon" ? styles.IsActive : ''}>Why Chepkolon </a>
                             </Link>
                         </li>
                         <li>
-                            <Link href ="/cgha/about-us/headmaster-welcome/">
-                                <a >Headmaster&apos;s welcome</a>
+                            <Link href ="/cgha/about-us/headmaster-welcome">
+                                <a className={pathname == "/cgha/about-us/headmaster-welcome" ? styles.IsActive : ''}>Headmaster&apos;s welcome</a>
                             </Link>
                         </li>
                         <li>
-                            <Link href ="/cgha/about-us/vision/">
-                                <a>Vision</a>
+                            <Link href ="/cgha/about-us/vision">
+                                <a className={pathname == "/cgha/about-us/vision" ? styles.IsActive : ''}>Vision</a>
                             </Link>
                         </li>
                         <li>
-                            <Link href ="/cgha/about-us/history/">
-                                <a>History</a>
+                            <Link href ="/cgha/about-us/history">
+                                <a className={pathname == "/cgha/about-us/history" ? styles.IsActive : ''}>History</a>
                             </Link>
                         </li>
                         <li>
-                            <Link href ="/cgha/about-us/staff/">
-                                <a >Staff</a>
+                            <Link href ="/cgha/about-us/staff">
+                                <a className={pathname == "/cgha/about-us/staff" ? styles.IsActive : ''}>Staff</a>
                             </Link>
                         </li>
                         <li>
-                            <Link href ="/cgha/about-us/job-vacancies/">
-                                <a>Job Vacancies</a>
+                            <Link href ="/cgha/about-us/job-vacancies">
+                                <a className={pathname == "/cgha/about-us/job-vacancies" ? styles.IsActive : ''}>Job Vacancies</a>
                             </Link>
                         </li>
                     </ul>
@@ -173,33 +175,33 @@ export default function About() {
                     </header>
                     <ul className={styles.SubMenu}>
                         <li>
-                            <Link href ="/cgha/about-us/why-chepkolon/">
-                                <a >Why Chepkolon</a>
+                            <Link href ="/cgha/about-us/why-chepkolon">
+                                <a className={pathname == "/cgha/about-us/why-chepkolon" ? styles.IsActive : ''}>Why Chepkolon </a>
                             </Link>
                         </li>
                         <li>
-                            <Link href ="/cgha/about-us/headmaster-welcome/">
-                                <a >Headmaster&apos;s welcome</a>
+                            <Link href ="/cgha/about-us/headmaster-welcome">
+                                <a className={pathname == "/cgha/about-us/headmaster-welcome" ? styles.IsActive : ''}>Headmaster&apos;s welcome</a>
                             </Link>
                         </li>
                         <li>
-                            <Link href ="/cgha/about-us/vision/">
-                                <a>Vision</a>
+                            <Link href ="/cgha/about-us/vision">
+                                <a className={pathname == "/cgha/about-us/vision" ? styles.IsActive : ''}>Vision</a>
                             </Link>
                         </li>
                         <li>
-                            <Link href ="/cgha/about-us/history/">
-                                <a>History</a>
+                            <Link href ="/cgha/about-us/history">
+                                <a className={pathname == "/cgha/about-us/history" ? styles.IsActive : ''}>History</a>
                             </Link>
                         </li>
                         <li>
-                            <Link href ="/cgha/about-us/staff/">
-                                <a >Staff</a>
+                            <Link href ="/cgha/about-us/staff">
+                                <a className={pathname == "/cgha/about-us/staff" ? styles.IsActive : ''}>Staff</a>
                             </Link>
                         </li>
                         <li>
-                            <Link href ="/cgha/about-us/job-vacancies/">
-                                <a>Job Vacancies</a>
+                            <Link href ="/cgha/about-us/job-vacancies">
+                                <a className={pathname == "/cgha/about-us/job-vacancies" ? styles.IsActive : ''}>Job Vacancies</a>
                             </Link>
                         </li>
                     </ul>
