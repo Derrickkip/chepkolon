@@ -112,10 +112,7 @@ const newsItems = {
     ]
 }
 
-export default function GreenHighlands() {
-    const [openTab, setOpenTab] = React.useState(1);
-
-    const items = [
+const items = [
     {
         link: "storylink/",
         src: require("../../assets/assembly.jpg"),
@@ -152,7 +149,10 @@ export default function GreenHighlands() {
         strong: 'Unique Location',
         span: 'The green environs of Kericho Town'
     }
-    ];
+];
+
+export default function GreenHighlands() {
+    const [openTab, setOpenTab] = React.useState(1);
     return (
         <>
         <section className={styles.Carousel}>
