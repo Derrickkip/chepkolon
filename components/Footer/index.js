@@ -61,8 +61,8 @@ const Footer = () => {
                         Chepkolon
                     </h3>
                     <h4>Telephone</h4>
-                    <a className={styles.Tel} href="tel: 0727138659" title="0727138659">0727138659</a>
-                    <a className={styles.Email} href="tel: 0727138659" title="0727138659">Contact</a>
+                    <a className={styles.Tel} href="tel: 0718003567" title="0718003567">0718003567</a>
+                    <a className={styles.Email} href="tel: 0718003567" title="0718003567">Contact</a>
                 </div>
                 <div className={styles.AddressItem}>
                     <Image className={styles.FIcon} src={require("../../assets/icons/boarding.png")} alt="placeholder"/>
@@ -74,8 +74,8 @@ const Footer = () => {
                         Nyagacho
                     </h3>
                     <h4>Telephone</h4>
-                    <a className={styles.Tel} href="tel: 0727138659" title="0727138659">0727138659</a>
-                    <a className={styles.Email} href="tel: 0727138659" title="0727138659">Contact</a>
+                    <a className={styles.Tel} href="tel: 0718003567" title="0718003567">0718003567</a>
+                    <a className={styles.Email} href="tel: 0718003567" title="0718003567">Contact</a>
                 </div>
                 <div className={styles.AddressItem}>
                     <Image className={styles.FIcon} src={require("../../assets/icons/boarding.png")} alt="placeholder"/>
@@ -87,8 +87,8 @@ const Footer = () => {
                         Nyagacho
                     </h3>
                     <h4>Telephone</h4>
-                    <a className={styles.Tel} href="tel: 0727138659" title="0727138659">0727138659</a>
-                    <a className={styles.Email} href="tel: 0727138659" title="0727138659">Contact</a>
+                    <a className={styles.Tel} href="tel: 0718003567" title="0718003567">0718003567</a>
+                    <a className={styles.Email} href="tel: 0718003567" title="0718003567">Contact</a>
                 </div>
             </div>
             <div className={styles.BottomCredits}>
