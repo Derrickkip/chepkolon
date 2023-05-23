@@ -9,13 +9,30 @@ import classNames from 'classnames'
 function IndexNavbar() {
     const [navbar, setNavbar] = React.useState("notScrolled");
   const [navbarCollapse, setNavbarCollapse] = React.useState(false);
+  const [isOpen, setSubMenu] = React.useState(false);
+  const [subMenuLinks, setLinks] = React.useState('')
 
   const {pathname} = useRouter();
 
   const toggleNavbarCollapse = () => {
     setNavbarCollapse(!navbarCollapse);
     document.documentElement.classList.toggle("nav-open");
+    document.body.classList.toggle("nav-open");
   };
+
+
+  const toggleSubMenu = (event, linkItems) => {
+    setLinks(linkItems)
+    setSubMenu(!isOpen);
+  }
+
+  const navigateToSubMenu = () => {
+    setTimeout(() => {
+    setSubMenu(!isOpen);
+    setNavbarCollapse(!navbarCollapse);
+    document.body.classList.toggle("nav-open");
+  }, 800)
+  }
 
   React.useEffect(() => {
     const updateNavbarColor = () => {
@@ -115,7 +132,7 @@ function IndexNavbar() {
                         </Link>
                       </li>
                       <li>
-                        <Link href='about-us/why-chepkolon'>
+                        <Link href='/cgha/about-us/why-chepkolon'>
                           <a onClick={toggleNavbarCollapse}>
                             About Chepkolon
                           </a>
@@ -127,7 +144,9 @@ function IndexNavbar() {
                             </div>
                             <div className={styles.MenuNavigateBackWrapper}>
                               <div className={styles.MenuCurrentSectionTitle}>
-                                <a href="about-us/">About Chepkolon</a>
+                                <Link href='about-us/why-chepkolon'>
+                                  <a>About Chepkolon</a>
+                                </Link>
                               </div>
                             </div>
                             <ul>
@@ -140,7 +159,36 @@ function IndexNavbar() {
                             </ul>
                           </div>
                         </div>
-                        <button type="button" className={classNames(styles.MenuBtnArrow, 'JsShowPanel')} title="open submenu" aria-label="open submenu">
+                        <button type="button" className={classNames(styles.MenuBtnArrow, 'JsShowPanel')} title="open submenu" aria-label="open submenu" onClick={(event) => toggleSubMenu(event,{
+                          title: "About Chepkolon",
+                          link: "/cgha/about-us/why-chepkolon",
+                          smallLinks: [
+                            {
+                              title: "Why Chepkolon?",
+                              link: "/cgha/about-us/why-chepkolon",
+                            },
+                            {
+                              title: "Head Master's Welcome",
+                              link: "/cgha/about-us/headmaster-welcome/",
+                            },
+                            {
+                              title: "Vision",
+                              link: "/cgha/about-us/vision/",
+                            },
+                            {
+                              title: "History",
+                              link: "/cgha/about-us/history/",
+                            },
+                            {
+                              title: "Staff",
+                              link: "/cgha/about-us/staff/",
+                            },
+                            {
+                              title: "Job Vacancies",
+                              link: "/cgha/about-us/job-vacancies/",
+                            }
+                          ]
+                        })}>
                           <Image src={require('../../assets/icons/icons8-down-arrow-50.png')} alt="arrow"/>
                         </button>
                       </li>
@@ -150,11 +198,36 @@ function IndexNavbar() {
                             <span>Admissions</span>
                           </a>
                         </Link>
-                        <button type="button" className={classNames(styles.MenuBtnArrow, 'JsShowPanel')} title="open submenu" aria-label="open submenu">
+                        <button type="button" className={classNames(styles.MenuBtnArrow, 'JsShowPanel')} title="open submenu" aria-label="open submenu" onClick={(event) => toggleSubMenu(event,{
+                          title: "Boarding",
+                          link: "/cgha/about-us/why-chepkolon",
+                          smallLinks: [
+                            {
+                              title: "Boarding At Chepkolon",
+                              link: "/cgha/about-us/why-chepkolon",
+                            },
+                            {
+                              title: "Boys Boarding",
+                              link: "/cgha/about-us/headmaster-welcome/",
+                            },
+                            {
+                              title: "Girls Boarding",
+                              link: "/cgha/about-us/vision/",
+                            },
+                            {
+                              title: "Weekends",
+                              link: "/cgha/about-us/history/",
+                            },
+                            {
+                              title: "Food At Chepkolon",
+                              link: "/cgha/about-us/staff/",
+                            }
+                          ]
+                        })}>
                           <Image src={require('../../assets/icons/icons8-down-arrow-50.png')} alt="arrow"/>
                         </button>
                       </li>
-                      <li>
+                      {/* <li>
                         <Link href='/cgha/welcome/'>
                           <a onClick={toggleNavbarCollapse}>
                             <span>Academic</span>
@@ -163,18 +236,43 @@ function IndexNavbar() {
                         <button type="button" className={classNames(styles.MenuBtnArrow, 'JsShowPanel')} title="open submenu" aria-label="open submenu">
                           <Image src={require('../../assets/icons/icons8-down-arrow-50.png')} alt="arrow"/>
                         </button>
-                      </li>
+                      </li> */}
                       <li>
                         <Link href='/cgha/welcome/'>
                           <a onClick={toggleNavbarCollapse}>
                             <span>Boarding</span>
                           </a>
                         </Link>
-                        <button type="button" className={classNames(styles.MenuBtnArrow, 'JsShowPanel')} title="open submenu" aria-label="open submenu">
+                        <button type="button" className={classNames(styles.MenuBtnArrow, 'JsShowPanel')} title="open submenu" aria-label="open submenu" onClick={(event) => toggleSubMenu(event,{
+                          title: "Boarding",
+                          link: "/cgha/about-us/why-chepkolon",
+                          smallLinks: [
+                            {
+                              title: "Boarding At Chepkolon",
+                              link: "/cgha/about-us/why-chepkolon",
+                            },
+                            {
+                              title: "Boys Boarding",
+                              link: "/cgha/about-us/headmaster-welcome/",
+                            },
+                            {
+                              title: "Girls Boarding",
+                              link: "/cgha/about-us/vision/",
+                            },
+                            {
+                              title: "Weekends",
+                              link: "/cgha/about-us/history/",
+                            },
+                            {
+                              title: "Food At Chepkolon",
+                              link: "/cgha/about-us/staff/",
+                            }
+                          ]
+                        })}>
                           <Image src={require('../../assets/icons/icons8-down-arrow-50.png')} alt="arrow"/>
                         </button>
                       </li>
-                      <li>
+                      {/* <li>
                         <Link href='/cgha/welcome/'>
                           <a onClick={toggleNavbarCollapse}>
                             <span>Pastoral</span>
@@ -183,18 +281,39 @@ function IndexNavbar() {
                         <button type="button" className={classNames(styles.MenuBtnArrow, 'JsShowPanel')} title="open submenu" aria-label="open submenu">
                           <Image src={require('../../assets/icons/icons8-down-arrow-50.png')} alt="arrow"/>
                         </button>
-                      </li>
+                      </li> */}
                       <li>
                         <Link href='/cgha/welcome/'>
                           <a onClick={toggleNavbarCollapse}>
                             <span>Co-Curricular</span>
                           </a>
                         </Link>
-                        <button type="button" className={classNames(styles.MenuBtnArrow, 'JsShowPanel')} title="open submenu" aria-label="open submenu">
+                        <button type="button" className={classNames(styles.MenuBtnArrow, 'JsShowPanel')} title="open submenu" aria-label="open submenu" onClick={(event) => toggleSubMenu(event,{
+                          title: "Co-Curricular",
+                          link: "/cgha/about-us/why-chepkolon",
+                          smallLinks: [
+                            {
+                              title: "Co-Curricular Aims",
+                              link: "/cgha/about-us/why-chepkolon",
+                            },
+                            {
+                              title: "Music",
+                              link: "/cgha/about-us/headmaster-welcome/",
+                            },
+                            {
+                              title: "Sport",
+                              link: "/cgha/about-us/vision/",
+                            },
+                            {
+                              title: "Trips",
+                              link: "/cgha/about-us/history/",
+                            }
+                          ]
+                        })}>
                           <Image src={require('../../assets/icons/icons8-down-arrow-50.png')} alt="arrow"/>
                         </button>
                       </li>
-                      <li>
+                      {/* <li>
                         <Link href='/cgha/welcome/'>
                           <a onClick={toggleNavbarCollapse}>
                             <span>News and Events</span>
@@ -203,13 +322,36 @@ function IndexNavbar() {
                         <button type="button" className={classNames(styles.MenuBtnArrow, 'JsShowPanel')} title="open submenu" aria-label="open submenu">
                           <Image src={require('../../assets/icons/icons8-down-arrow-50.png')} alt="arrow"/>
                         </button>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
                 </div>
               </div>
-              <div className={classNames(styles.SecondLevelNavigation, 'second-level-navigation')}>
-                
+              <div className={classNames(styles.SecondLevelNavigation, isOpen ? styles.IsOpen : '', 'second-level-navigation')}>
+                <button className={styles.IntSchMenuCloseSLPanel} title="close submenu" onClick={toggleSubMenu}></button>
+                <div className={styles.MenuDisplayTable}>
+                  <div className={styles.MenuDisplayTableCell}>
+                    <div className={styles.MenuNavigateBack}>
+                      Back
+                    </div>
+                    <div className={styles.MenuNavigateBackWrapper}>
+                      <div className={styles.MenuCurrentSectionTitle}>
+                        <Link href='/cgha/about-us/why-chepkolon'>
+                          <a onClick={toggleNavbarCollapse}>{subMenuLinks && subMenuLinks.title}</a>
+                        </Link>
+                      </div>
+                    </div>
+                    <ul>
+                      {
+                        subMenuLinks && subMenuLinks.smallLinks.map((link, index) => {
+                          return (
+                            <li key={index}><Link href={link.link}><a onClick={navigateToSubMenu}>{link.title}</a></Link></li>
+                          )
+                        })
+                      }
+                    </ul>
+                  </div>
+                </div>
               </div>
               <div className={styles.ThirdLevelNavigation}>
                 

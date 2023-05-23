@@ -9,11 +9,29 @@ import styles from './Welcome.module.css'
 
 import ImageSlider from "../../components/imageSlider";
 
-import SectionCarousel from "../../components/carousel";
+import Carousel from 'react-multi-carousel';
 
 import WelcomeCarousel from "../../components/Welcome/carousel";
 
 import NewsComponent from "../../components/News";
+
+const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 1,
+      slidesToSlide: 1 // optional, default to 1.
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 1,
+      slidesToSlide: 1 // optional, default to 1.
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      slidesToSlide: 1 // optional, default to 1.
+    }
+  };
 
 const eventItems = {
     isEvent: true,
@@ -99,19 +117,40 @@ export default function GreenHighlands() {
 
     const items = [
     {
+        link: "storylink/",
         src: require("../../assets/assembly.jpg"),
         alt: "Somewhere",
-        caption: "Somewhere"
+        caption: "We believe that academic stretch should be available to every pupil, whatever his interests and enthusiasms.",
+        itemNo: 1,
+        strong: 'Pursuit of Academic Excellence',
+        span: 'Education for Tomorrows world'
     },
     {
-        src: require("../../assets/assembly.jpg"),
+        link: "storylink/",
+        src: require("../../assets/assembly2.jpg"),
         alt: "Somewhere else",
-        caption: "Somewhere else"
+        caption: "We believe in the all round well being of our students and therefore incorporate religion in our daily activities.",
+        itemNo: 2,
+        strong: 'Strong Christian Education',
+        span: 'Education founded on religious values'
     },
     {
-        src: require("../../assets/assembly.jpg"),
+        link: "storylink/",
+        src: require("../../assets/class.jpg"),
         alt: "Here it is",
-        caption: "Here it is"
+        caption: "Chepkolon offers a distinctive education in so many ways, but none more so than in our commitment to providing an amazing boarding experience.",
+        itemNo: 3,
+        strong: 'Excellent Boarding Facilities',
+        span: 'Community of care and opportunity'
+    },
+    {
+        link: "storylink/",
+        src: require("../../assets/class2.jpg"),
+        alt: "Here it is",
+        caption: "Chepkolon lies in the beautiful Kericho countryside, but is very easily accessible from Nairobi and other major cities.",
+        itemNo: 4,
+        strong: 'Unique Location',
+        span: 'The green environs of Kericho Town'
     }
     ];
     return (
@@ -152,135 +191,99 @@ export default function GreenHighlands() {
                     <h2>Why</h2>
                     <h3>Chepkolon Green Highlands ?</h3>
                 </header>
-                <div className={classNames(styles.PictureWrapper, openTab==1 ? 'block' : 'hidden')}>
-                    <div className={styles.Image}>
-                        <a href="cgha/welcome" className={styles.Link}></a>
-                        <div className={styles.ImgHolder}>
-                            <Image src={require('../../assets/assembly2.jpg')} alt="director" />
+                { items.map((item, index) => {
+                    return (
+                        <div className={classNames(styles.PictureWrapper, openTab==`${item.itemNo}` ? 'block' : 'hidden')} key={index}>
+                            <div className={styles.Image}>
+                                <a href={item.link} className={styles.Link}></a>
+                                <div className={styles.ImgHolder}>
+                                    <Image src={item.src} alt="director" />
+                                </div>
+                                <p className={styles.Description}>
+                                    <span className={styles.FirstCharacter}>
+                                       {item.caption[0]}
+                                    </span>
+                                    <span>{item.caption.substring(1)}</span>
+                                </p>
+                            </div>
                         </div>
-                        <p className={styles.Description}>
-                            <span className={styles.FirstCharacter}>
-                                W
-                            </span>
-                            <span>e have an excellent record of academic success, with an average of 40 per cent of our Year 8s gaining a range of scholarships to a variety of high-quality senior schools.</span>
-                        </p>
-                    </div>
-                </div>
-                <div className={classNames(styles.PictureWrapper, openTab==2 ? 'block' : 'hidden')}>
-                    <div className={styles.Image}>
-                        <a href="cgha/welcome" className={styles.Link}></a>
-                        <div className={styles.ImgHolder}>
-                            <Image src={require('../../assets/assembly.jpg')} alt="director" />
-                        </div>
-                        <p className={styles.Description}>
-                            <span className={styles.FirstCharacter}>
-                                W
-                            </span>
-                            <span>e believe this makes us unique in significant ways that will benefit your child. In short we offer a very different kind of single-sex education.</span>
-                        </p>
-                    </div>
-                </div>
-                <div className={classNames(styles.PictureWrapper, openTab==3 ? 'block' : 'hidden')}>
-                    <div className={styles.Image}>
-                        <a href="cgha/welcome" className={styles.Link}></a>
-                        <div className={styles.ImgHolder}>
-                            <Image src={require('../../assets/assembly2.jpg')} alt="director" />
-                        </div>
-                        <p className={styles.Description}>
-                            <span className={styles.FirstCharacter}>
-                                C
-                            </span>
-                            <span>hepkolon offers a distinctive education in so many ways, but none more so than in our commitment to providing an all-boys, full-boarding experience.</span>
-                        </p>
-                    </div>
-                </div>
-                <div className={classNames(styles.PictureWrapper, openTab==4 ? 'block' : 'hidden')}>
-                    <div className={styles.Image}>
-                        <a href="cgha/welcome" className={styles.Link}></a>
-                        <div className={styles.ImgHolder}>
-                            <Image src={require('../../assets/antoine-barres.jpg')} alt="director" />
-                        </div>
-                        <p className={styles.Description}>
-                            <span className={styles.FirstCharacter}>
-                                C
-                            </span>
-                            <span>hepkolon lies in the beautiful Kericho countryside, but is very easily accessible from Nairobi and other major cities.</span>
-                        </p>
-                    </div>
-                </div>
+                    )
+                })}
                 <ul className={styles.ItemsDesktop}>
-                    <li className={classNames(styles.WhyChepkolonItem, openTab==1 ? styles.IsSelected : '')}>
-                    <a
-                        onClick={e => {
-                        e.preventDefault();
-                        setOpenTab(1);
-                        }}
-                        data-toggle="tab"
-                        href="#link1"
-                        role="tablist"
-                    >
-                        <span className={classNames(styles.ItemNo)}>1</span>
-                        <h2>
-                            <strong>Pursuit of Academic Excellence</strong>
-                            <span>Education for Tomorrows world</span>
-                        </h2>
-                    </a>
-                    </li>
-                    <li className={classNames(styles.WhyChepkolonItem, openTab==2 ? styles.IsSelected : '')}>
-                        <a
-                            onClick={e => {
-                            e.preventDefault();
-                            setOpenTab(2);
-                            }}
-                            data-toggle="tab"
-                            href="#link2"
-                            role="tablist"
-                        >
-                            <span className={styles.ItemNo}>2</span>
-                            <h2>
-                                <strong>Strong Christian Education</strong>
-                                <span>Education founded on religious values</span>
-                            </h2>
-                        </a>
-                    </li>
-                    <li className={classNames(styles.WhyChepkolonItem, openTab==3 ? styles.IsSelected : '')}>
-                        <a
-                            onClick={e => {
-                            e.preventDefault();
-                            setOpenTab(3);
-                            }}
-                            data-toggle="tab"
-                            href="#link1"
-                            role="tablist"
-                        >
-                            <span className={styles.ItemNo}>3</span>
-                            <h2>
-                                <strong>Excellent Boarding Facilities</strong>
-                                <span>Community of care and opportunity</span>
-                            </h2>
-                        </a>
-                    </li>
-                    <li className={classNames(styles.WhyChepkolonItem, openTab==4 ? styles.IsSelected : '')}>
-                        <a
-                            onClick={e => {
-                            e.preventDefault();
-                            setOpenTab(4);
-                            }}
-                            data-toggle="tab"
-                            href="#link1"
-                            role="tablist"
-                        >
-                            <span className={styles.ItemNo}>4</span>
-                            <h2>
-                                <strong>Unique Location</strong>
-                                <span>The green environs of Kericho Town</span>
-                            </h2>
-                        </a>
-                    </li>
+                    {items.map((item, index) => {
+                        return (
+                            <li className={classNames(styles.WhyChepkolonItem, openTab==`${item.itemNo}` ? styles.IsSelected : '')} key={index}>
+                                <a
+                                    onClick={e => {
+                                    e.preventDefault();
+                                    setOpenTab(`${item.itemNo}`);
+                                    }}
+                                    data-toggle="tab"
+                                    href="#link1"
+                                    role="tablist"
+                                >
+                                    <span className={classNames(styles.ItemNo)}>{`${item.itemNo}`}</span>
+                                    <h2>
+                                        <strong>{item.strong}</strong>
+                                        <span>{item.span}</span>
+                                    </h2>
+                                </a>
+                            </li>
+                        )
+                    })}
                 </ul>
                 <div className={styles.MobileWrapper}>
                     <div>
-                        <ImageSlider images={items} />
+                        {/* <ImageSlider images={items} /> */}
+                        <Carousel
+                            swipeable={true}
+                            draggable={false}
+                            showDots={false}
+                            responsive={responsive}
+                            ssr={true} // means to render carousel on server-side.
+                            infinite={true}
+                            autoPlay={false}
+                            autoPlaySpeed={5000}
+                            keyBoardControl={true}
+                            customTransition="all .5"
+                            // customButtonGroup={<ButtonGroup />}
+                            arrows={true}
+                            transitionDuration={500}
+                            containerClass="carousel-container"
+                            removeArrowOnDeviceType={[]}
+                            // deviceType={this.props.deviceType}
+                            dotListClass="custom-dot-list-style"
+                            itemClass="carousel-item-padding-40-px"
+                        >
+                            {items.map((item, index) => {
+                            return (
+                            <figure className={styles.WsMobile} key={index}>
+                                <Link href={item.link}>
+                                    <a className={styles.WsMobileLink}></a>
+                                </Link>
+                                <div className={styles.WsMobileImgWrapper}>
+                                    <div className={styles.WsMobileImgHolder}>
+                                        <Image
+                                        src={item.src || ''}
+                                        alt={item.alt}
+                                        />
+                                    </div>
+                                    <div className={styles.WsMobileShortDesc}>
+                                        <span className={styles.ItemNo}>
+                                            {item.itemNo}
+                                        </span>
+                                        <h2>
+                                            <strong>{item.strong}</strong><span>{item.span}</span>
+                                        </h2>
+                                    </div>
+                                </div>
+                                <figcaption>
+                                    {item.caption}
+                                </figcaption>
+                            </figure>
+                            );
+                        })}
+                        </Carousel>
                     </div>
                 </div>
             </div>

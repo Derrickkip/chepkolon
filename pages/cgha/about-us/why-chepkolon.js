@@ -30,7 +30,7 @@ export default function About() {
                         </a>
                     </li>
                     <li className={styles.BreadcrumbsItem}>
-                        <a className={styles.BreadcrumbsLink} href='javascript:void(0)'>
+                        <a className={styles.BreadcrumbsLink} href='#'>
                             Why Chepkolon
                         </a>
                     </li>

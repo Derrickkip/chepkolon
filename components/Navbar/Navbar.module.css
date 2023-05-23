@@ -715,6 +715,21 @@
   position: relative;
 }
 
+.intSchMenu .intSchMenu__accSl>div>ul>li>a, .IntSchMenu .SecondLevelNavigation>.MenuDisplayTable>.MenuDisplayTableCell>ul>li>a, .menuSecondLvlLinks {
+  font-size: 18px;
+  letter-spacing: .08em;
+  padding: 7px 0;
+  text-transform: uppercase;
+  color: #000;
+  display: block;
+  font-family: Sorts Mill Goudy,Times New Roman,sans-serif;
+  font-weight: 400;
+  -webkit-transition: .2s ease-in-out;
+  -o-transition: .2s ease-in-out;
+  -moz-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
 .IntSchMenu .SecondLevelNavigation {
   background: url(../../assets/menuPanelBg.png) no-repeat top/cover;
   border-right: 1px solid #f3eee6;
@@ -746,6 +761,116 @@
   -moz-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
   z-index: -1;
+}
+
+.IntSchMenu .SecondLevelNavigation.IsOpen {
+  left: 210px;
+  opacity: 1;
+  pointer-events: all;
+  -webkit-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
+  -moz-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  z-index: 7;
+}
+
+.IntSchMenuCloseSLPanel {
+  cursor: pointer;
+  display: block;
+  height: 35px;
+  position: absolute;
+  right: 15px;
+  top: 40px;
+  width: 48px;
+  z-index: 4;
+}
+
+.IntSchMenuCloseSLPanel:after, .IntSchMenuCloseSLPanel:before {
+  background: #bf9951;
+  content: "";
+  height: 1px;
+  left: 50%;
+  margin: -1px 0 0 -15px;
+  position: absolute;
+  top: 50%;
+  -webkit-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
+  -moz-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  width: 30px;
+}
+
+.IntSchMenuCloseSLPanel:before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.IntSchMenuCloseSLPanel:after {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.IntSchMenu .SecondLevelNavigation>.MenuDisplayTable {
+  display: block!important;
+  font-size: 0;
+  height: 100%;
+  overflow-y: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.IntSchMenu .SecondLevelNavigation>.MenuDisplayTable:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  margin-left: -.25em;
+  vertical-align: middle;
+}
+
+.IntSchMenu .SecondLevelNavigation>.MenuDisplayTable>.MenuDisplayTableCell {
+  display: inline-block;
+  padding: 0 50px 0 60px;
+  vertical-align: middle;
+  width: 98%;
+}
+
+.MenuNavigateBack {
+  color: #a46e08;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Sorts Mill Goudy,Times New Roman,sans-serif;
+  font-size: 16px;
+  letter-spacing: .08em;
+  position: relative;
+  text-transform: uppercase;
+  z-index: 5;
+}
+
+.MenuNavigateBack:before {
+  left: -30px;
+  position: absolute;
+  top: 4px;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  -moz-transition: .2s;
+  transition: .2s;
+  background-color: transparent;
+  background-image: url(../../assets/arrow-down.png);
+  background-repeat: no-repeat;
+}
+
+.dsa-LG_ISC_menuArrowBack:after, .dsb-LG_ISC_menuArrowBack:before, .MenuNavigateBack:before {
+  background-position: -137px -102px;
+  content: "";
+  display: inline-block;
+  height: 11px;
+  width: 22px;
 }
 
 .IntSchMenuMenusWrapper.FirstActive .SecondLevelNavigation, .IntSchMenuMenusWrapper.FirstActive .ThirdLevelNavigation {
@@ -816,6 +941,9 @@
   .IntSchMenu .FirstLevelNavigation .TemplateMainMenuLinks .TemplateMainMenuLinksInner>ul>li>a {
     font-size: 20px;
   }
+  .IntSchMenu .SecondLevelNavigation.IsOpen {
+    left: 160px;
+}
 }
 
 @media screen and (max-width: 1500px) {
@@ -970,6 +1098,37 @@
     max-width: 280px;
     top: 15px;
   }
+
+  .IntSchMenu .SecondLevelNavigation.IsOpen {
+    left: 40px;
+    min-height: 796px;
+}
+
+.IntSchMenu .SecondLevelNavigation .intSchMenuBtnsClone {
+  left: 60px;
+}
+
+.IntSchMenu .SecondLevelNavigation .IntSchMenuBtnsClone {
+  display: block;
+}
+
+.IntSchMenu .SecondLevelNavigation .IntSchMenuCloseSLPanel {
+  left: 6px;
+  right: auto;
+  top: 26px;
+}
+
+.IntSchMenu .SecondLevelNavigation>.MenuDisplayTable>.MenuDisplayTableCell {
+  padding: 0 35px 0 50px;
+}
+
+.MenuNavigateBack {
+  display: none;
+}
+
+.IntSchMenu .SecondLevelNavigation>.MenuDisplayTable>.MenuDisplayTableCell>.MenuNavigateBackWrapper {
+  display: block;
+}
 }
 
 @media screen and (max-width: 880px) {
@@ -1023,5 +1182,14 @@
 
 .BtnWithDropDown {
   display: none;
+}
+
+.IntSchMenuBtnsClone {
+  left: 22px;
+  top: 25px;
+}
+
+.IntSchMenu .SecondLevelNavigation>.MenuDisplayTable>.MenuDisplayTableCell {
+  padding: 0 35px 0 50px;
 }
 }
