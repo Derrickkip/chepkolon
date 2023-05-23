@@ -63,6 +63,44 @@
     content: "";
 }
 
+.SlHeroItem:before {
+    background: -moz-linear-gradient(top,#000 0,rgba(2,1,2,0) 100%);
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,#000),color-stop(100%,rgba(2,1,2,0)));
+    background: -webkit-linear-gradient(top,#000,rgba(2,1,2,0));
+    background: -o-linear-gradient(top,#000 0,rgba(2,1,2,0) 100%);
+    background: -ms-linear-gradient(top,#000 0,rgba(2,1,2,0) 100%);
+    background: -webkit-gradient(linear,left top,left bottom,from(#000),to(rgba(2,1,2,0)));
+    background: linear-gradient(180deg,#000 0,rgba(2,1,2,0));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#00020102",GradientType=0);
+    height: 40%;
+    left: 0;
+    opacity: .5;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    content: "";
+}
+
+.SlHeroItem:after {
+    background: -moz-linear-gradient(top,rgba(2,1,2,0) 0,#000 100%);
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,rgba(2,1,2,0)),color-stop(100%,#000));
+    background: -webkit-linear-gradient(top,rgba(2,1,2,0),#000);
+    background: -o-linear-gradient(top,rgba(2,1,2,0) 0,#000 100%);
+    background: -ms-linear-gradient(top,rgba(2,1,2,0) 0,#000 100%);
+    background: -webkit-gradient(linear,left top,left bottom,from(rgba(2,1,2,0)),to(#000));
+    background: linear-gradient(180deg,rgba(2,1,2,0) 0,#000);
+    bottom: 0;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00020102",endColorstr="#000000",GradientType=0);
+    height: 40%;
+    left: 0;
+    opacity: .5;
+    position: absolute;
+    right: 0;
+    content: "";
+}
+
 .SlHeroItem .BgImg {
     background-position: top;
     opacity: 1;
@@ -72,7 +110,19 @@
 }
 
 .SlHeroItem .BgImg.OurStory {
-    background-image: url(../../../assets/david-towett-director.png);
+    background-image: url(../../../assets/class.jpg);
+}
+
+.BgImg, .g-canvas {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    -moz-background-size: cover;
+    background-size: cover;
 }
 
 .ContentArea {
