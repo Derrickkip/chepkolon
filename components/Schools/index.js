@@ -62,7 +62,7 @@ const Schools = () => {
                             <div>ACADEMY</div>
                         </div>
                         <Link href='cgha/welcome'>
-                            <a></a>
+                            <a target='_blank'></a>
                         </Link>
                     </div>
                     <div className={styles.Link}>
@@ -75,7 +75,7 @@ const Schools = () => {
                             <div>HIGH SCHOOL</div>
                         </div>
                         <Link href='/comingsoon'>
-                            <a></a>
+                            <a target='_blank'></a>
                         </Link>
                     </div>
                     <div className={styles.Link}>
@@ -88,7 +88,7 @@ const Schools = () => {
                             <div>MJINI</div>
                         </div>
                         <Link href='/comingsoon'>
-                            <a></a>
+                            <a target='_blank'></a>
                         </Link>
                     </div>
             </section>

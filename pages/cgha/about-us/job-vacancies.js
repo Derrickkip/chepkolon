@@ -5,6 +5,7 @@ import {useRouter} from 'next/router';
 import styles from './AboutUs.module.css'
 
 import classNames from 'classnames';
+import Footer from '../footer';
 
 export default function About() {
     const {pathname} = useRouter();
@@ -208,6 +209,7 @@ export default function About() {
                 </div>
             </div>
         </section>
+        <Footer />
         </>
     )
 }

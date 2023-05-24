@@ -65,6 +65,10 @@ section, header {
   box-sizing: border-box;
 }
 
+address {
+  font-style: normal;
+}
+
 .sticky-calendar-wrapper {
   display: block !important;
   bottom: 0;

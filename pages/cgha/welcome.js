@@ -14,6 +14,7 @@ import Carousel from 'react-multi-carousel';
 import WelcomeCarousel from "../../components/Welcome/carousel";
 
 import NewsComponent from "../../components/News";
+import Footer from "./footer";
 
 const responsive = {
     desktop: {
@@ -178,7 +179,10 @@ export default function GreenHighlands() {
                     <div className={styles.WelcomeVideo}>
                         {/* <p style={'display':'none'}></p> */}
                         <div className={classNames(styles.VideoControlHolder, styles.WelcomeRatioPicture, styles.WelcomeVideoInner)}>
-                            
+                            <h3>youtube</h3>
+                            <div className={classNames(styles.VideoControlHolder, styles.WelcomeVideoWrapper)}>
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -289,6 +293,7 @@ export default function GreenHighlands() {
             </div>
         </section>
         <NewsComponent newsItems={eventItems}/>
+        <Footer />
         </>
     )
 }

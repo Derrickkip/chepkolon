@@ -4,6 +4,7 @@ import Calendar from '../components/calendar'
 import TopHeader from '../components/topHeader'
 import HeroImage from '../components/heroimage'
 import Header from '../components/header'
+import Footer from '../components/Footer'
 
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
           <Welcome />
           <Schools />
           <TopHeader />
+          <Footer />
           {/* <Calendar /> */}
         </>  
   )

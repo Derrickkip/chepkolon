@@ -1,0 +1,362 @@
+.Footer {
+    overflow: hidden;
+    padding-top: 110px;
+    position: relative;
+}
+
+.Footer:before {
+    bottom: 0;
+    content: "";
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.FooterMain {
+    margin: 0 auto;
+    max-width: 1430px;
+    padding: 0 25px 23px;
+    position: relative;
+}
+
+.FooterMain:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.FooterCol {
+    float: left;
+    width: 33.33333%;
+}
+
+.FooterBigHeader {
+    color: #a46e08;
+    font-family: Sorts Mill Goudy,Times New Roman,sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+    letter-spacing: .1em;
+    padding-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.FooterBigHeader.IsSmaller {
+    font-size: 25px;
+}
+
+.Footer .HpPromos {
+    text-align: center;
+}
+
+.Footer .HpPromos .HpPromosLink {
+    color: #000;
+    font-family: Sorts Mill Goudy,Times New Roman,sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .14em;
+    line-height: 1.33;
+    text-transform: uppercase;
+    -webkit-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.Footer .HpPromos .HpPromosLink, .GhLeftLine {
+    position: relative;
+}
+
+.FooterWaterMark {
+    height: 433px;
+    left: 50%;
+    margin: -216px 0 0 -218px;
+    opacity: .85;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    width: 437px;
+}
+
+.FooterCol:nth-of-type(2) .FooterAddressWrapper {
+    padding: 7px 0 20px;
+}
+
+.FooterCol:nth-of-type(2) {
+    padding-left: 45px;
+    padding-right: 45px;
+    position: relative;
+    text-align: center;
+}
+
+.FooterCol:nth-of-type(2), .FooterCol:nth-of-type(2) .FooterAddressWrapper {
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.FooterHeading {
+    color: #000;
+    font-family: Sorts Mill Goudy,Times New Roman,sans-serif;
+    font-size: 18px;
+    letter-spacing: .36em;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.Footer address p {
+    display: block;
+    line-height: 1.3;
+}
+
+.Footer p {
+    color: #000;
+    font-family: calibri,sans-serif;
+    font-size: 18px;
+    line-height: 1.67;
+}
+
+.FooterDirections {
+    display: inline-block;
+    padding-top: 4px;
+}
+
+.FooterDirections i, .FooterDirections span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.ds-LG_GB_mapPin, .dsb-LG_GB_mapPin:before, .FooterDirections i {
+    background-position: -81px -143px;
+    height: 16px;
+    width: 13px;
+}
+
+.FooterDirections span {
+    color: #9c7027;
+    font-family: Sorts Mill Goudy,Times New Roman,sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-left: 5px;
+    padding-top: 3px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.footer .hpPromos .hpPromos__link:before, .GhLeftLine:before {
+    background: currentColor;
+    content: "";
+    height: 1px;
+    opacity: .6;
+    position: absolute;
+    top: 100%;
+    -webkit-transition: .2s ease-in-out;
+    -o-transition: .2s ease-in-out;
+    -moz-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+    width: 0;
+}
+
+.FooterPhoneWrapper {
+    padding: 30px 0 0;
+}
+
+.FooterPhoneWrapper a {
+    line-height: 1.2;
+    margin-top: 3px;
+}
+
+.Connect {
+    margin-bottom: -20px;
+    z-index: 3;
+}
+
+.Footer .Connect {
+    margin-bottom: 0;
+    text-align: right;
+}
+
+.ConnectInner {
+    display: inline-block;
+}
+
+.Footer .Connect .ConnectInner:after {
+    background: #a46e08;
+    content: "";
+    display: block;
+    height: 1px;
+    margin: 8px auto 0;
+    width: 30px;
+}
+
+.Connect ul {
+    font-size: 0;
+    margin: 0 -5px;
+    text-align: center;
+}
+
+.ConnectFullText {
+    color: #a46e08;
+    font-family: Sorts Mill Goudy,Times New Roman,sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: .36em;
+    margin-bottom: -10px;
+    margin-top: 5px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.ConnectIcon {
+    display: inline-block;
+    font-size: 0;
+    margin: 10px 5px;
+    position: relative;
+    vertical-align: middle;
+}
+
+.BottomCredits {
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    font-family: Sorts Mill Goudy;
+}
+
+.Footer .BottomCredits .ButtonTop {
+    cursor: pointer;
+    display: inline-block;
+    height: 30px;
+    left: 50%;
+    position: absolute;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 50px;
+}
+
+.Footer .BottomCredits .ButtonTop:after {
+    background-position: -13px -166px;
+    content: "";
+    display: inline-block;
+    height: 19px;
+    width: 10px;
+}
+
+.ConnectFullText span {
+    display: block;
+}
+
+.ConnectFullText strong {
+    color: #000;
+    font-weight: 400;
+    padding-right: 4px;
+}
+
+.ConnectIcon a {
+    height: 40px;
+    margin: auto;
+    text-align: center;
+    -webkit-transition: .2s ease-in-out;
+    -o-transition: .2s ease-in-out;
+    -moz-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+    width: 40px;
+}
+
+.ConnectIcon a i {
+    display: inline-block;
+    vertical-align: middle;
+    z-index: 1;
+}
+
+@media screen and (max-width: 1500px) {
+
+    .Footer .FooterBigHeader {
+        font-size: 30px;
+    }
+
+    .Footer .FooterBigHeader.IsSmaller {
+        font-size: 22px;
+    }
+
+    .Footer .FooterHeading {
+        font-size: 16px;
+    }
+
+    .Footer p {
+        font-size: 17px;
+    }
+
+    .Footer .Connect {
+        text-align: center;
+    }
+
+    .Footer .Connect .ConnectFullText {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .Footer .Connect ul {
+        margin: 0 auto;
+        max-width: 195px;
+        padding-bottom: 13px;
+    }
+
+    .Footer .Connect .ConnectIcon {
+        margin: 1px 5px;
+    }
+
+    .Footer .Connect .ConnectIcon a {
+        height: 34px;
+    }
+
+}
+
+@media screen and (max-width: 1250px) {
+    .Footer {
+        padding-top: 100px;
+    }
+}
+
+
+@media screen and (max-width: 1023px) {
+    .Footer {
+        padding-top: 80px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .Footer {
+        padding-top: 70px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .Footer {
+        padding-top: 50px;
+    }
+
+    .Footer .FooterMain {
+        display: block;
+        padding: 0 20px 45px;
+    }
+
+    .Footer .FooterMain .FooterCol {
+        float: none;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+    }
+
+    .Footer .FooterMain .FooterCol:first-of-type {
+        display: none;
+    }
+}
