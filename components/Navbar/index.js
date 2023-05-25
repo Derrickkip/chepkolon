@@ -245,11 +245,11 @@ function IndexNavbar() {
                         </Link>
                         <button type="button" className={classNames(styles.MenuBtnArrow, 'JsShowPanel')} title="open submenu" aria-label="open submenu" onClick={(event) => toggleSubMenu(event,{
                           title: "Boarding",
-                          link: "/cgha/about-us/why-chepkolon",
+                          link: "/cgha/boarding",
                           smallLinks: [
                             {
                               title: "Boarding At Chepkolon",
-                              link: "/cgha/about-us/why-chepkolon",
+                              link: "/cgha/boarding",
                             },
                             {
                               title: "Boys Boarding",
