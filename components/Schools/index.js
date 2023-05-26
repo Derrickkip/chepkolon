@@ -67,7 +67,7 @@ const Schools = () => {
                     </div>
                     <div className={styles.Link}>
                         <div className={classNames(styles.ImageBox, styles.Blue)}>
-                            <Image src={require('../../assets/assembly2.jpg')} className="w-full" alt="school"/>
+                            <Image src={require('../../assets/class.jpg')} className="w-full" alt="school"/>
                         </div>
                         <div className={styles.LinkInfo}>
                             <div>CHEPKOLON</div>
@@ -80,7 +80,7 @@ const Schools = () => {
                     </div>
                     <div className={styles.Link}>
                         <div className={classNames(styles.ImageBox, styles.Red)}>
-                            <Image src={require('../../assets/assembly2.jpg')} className="w-full" alt="school"/>
+                            <Image src={require('../../assets/mjini1.jpg')} className="w-full" alt="school"/>
                         </div>
                         <div className={styles.LinkInfo}>
                             <div>CHEPKOLON</div>
