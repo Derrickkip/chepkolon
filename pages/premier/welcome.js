@@ -14,6 +14,7 @@ import Carousel from 'react-multi-carousel';
 import WelcomeCarousel from "../../components/Welcome/carousel";
 
 import NewsComponent from "../../components/News";
+import Footer from "./footer";
 
 const responsive = {
     desktop: {
@@ -118,7 +119,7 @@ export default function GreenHighlands() {
     const items = [
     {
         link: "storylink/",
-        src: require("../../assets/assembly.jpg"),
+        src: require("../../assets/mjini1.jpg"),
         alt: "Somewhere",
         caption: "We believe that academic stretch should be available to every pupil, whatever his interests and enthusiasms.",
         itemNo: 1,
@@ -127,7 +128,7 @@ export default function GreenHighlands() {
     },
     {
         link: "storylink/",
-        src: require("../../assets/assembly2.jpg"),
+        src: require("../../assets/mjini2.jpg"),
         alt: "Somewhere else",
         caption: "We believe in the all round well being of our students and therefore incorporate religion in our daily activities.",
         itemNo: 2,
@@ -153,11 +154,31 @@ export default function GreenHighlands() {
         span: 'The green environs of Kericho Town'
     }
     ];
+
+    const CarouselItems = [
+        {
+          src: require("../../assets/mjini1.jpg"),
+          alt: "Here it is",
+          caption: "Here it is"
+        },
+        {
+          src: require("../../assets/mjini2.jpg"),
+          alt: "Somewhere",
+          caption: "Somewhere"
+        },
+        {
+          src: require("../../assets/class.jpg"),
+          alt: "Here it is",
+          caption: "Here it is"
+        }
+      ];
+
+    const welcomeText = 'Chepkolon Premier School - Mjini is a mixed gender day  Primary School in Kericho Town.'
     return (
         <>
         <section className={styles.Carousel}>
             <div className="">
-                <WelcomeCarousel />
+                <WelcomeCarousel items={CarouselItems} welcomeText = {welcomeText}/>
             </div>
         </section>
         <section className={styles.Welcome}>
@@ -165,9 +186,9 @@ export default function GreenHighlands() {
                 <article className={styles.WelcomePrimary}>
                     <header className={styles.GptHeader}>
                         <h2>Welcome to</h2>
-                        <h3>Chepkolon Green Highlands</h3>
+                        <h3>Chepkolon Premier School - Mjini</h3>
                     </header>
-                    <p>Welcome to Chepkolon Green Highlands - where our pupils are encouraged to seize every opportunity before them.</p>
+                    <p>Welcome to Chepkolon Premier School - where our pupils are encouraged to seize every opportunity before them.</p>
                     <blockquote>
                         <p>We focus on providing a magical childhood experience. 
                         Our Christian Values are a perfect guide that enable our children to become kind,
@@ -189,7 +210,7 @@ export default function GreenHighlands() {
             <div className={styles.WhyChepkolonContainer}>
                 <header className={styles.GptHeader}>
                     <h2>Why</h2>
-                    <h3>Chepkolon Green Highlands ?</h3>
+                    <h3>Chepkolon Premier School ?</h3>
                 </header>
                 { items.map((item, index) => {
                     return (
@@ -289,6 +310,7 @@ export default function GreenHighlands() {
             </div>
         </section>
         <NewsComponent newsItems={eventItems}/>
+        <Footer />
         </>
     )
 }

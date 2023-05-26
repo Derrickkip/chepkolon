@@ -26,35 +26,6 @@ const responsive = {
   }
 };
 
-  const items = [
-      {
-        src: require("../../assets/assembly.jpg"),
-        alt: "Here it is",
-        caption: "Here it is"
-      },
-      {
-        src: require("../../assets/class2.jpg"),
-        alt: "Somewhere",
-        caption: "Somewhere"
-      },
-      {
-        src: require("../../assets/class.jpg"),
-        alt: "Here it is",
-        caption: "Here it is"
-      }
-      // },
-      // {
-      //   src: require("../../assets/antoine-barres.jpg"),
-      //   alt: "Somewhere else",
-      //   caption: "Somewhere else"
-      // },
-      // {
-      //   src: require("../../assets/bruno-abatti.jpg"),
-      //   alt: "Here it is",
-      //   caption: "Here it is"
-      // }
-    ];
-
     const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
       const { carouselState: { currentSlide } } = rest;
       return (
@@ -108,7 +79,8 @@ const responsive = {
       );
     };
 
-function WelcomeCarousel() {
+function WelcomeCarousel(props) {
+      const items = props.items
       return (
         <div className='carousel-full'>
           <Carousel
@@ -154,7 +126,7 @@ function WelcomeCarousel() {
               </h1>
             </div>
           </article>
-          <h2 className={styles.HeroSmallText}>Chepkolon Green Highlands Academy is a mixed gender day and boarding Primary School in Kericho.</h2>
+          <h2 className={styles.HeroSmallText}>{props.welcomeText}</h2>
           <button className='scrollDownButton'>
             <i></i>
           </button>

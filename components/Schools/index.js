@@ -85,9 +85,9 @@ const Schools = () => {
                         <div className={styles.LinkInfo}>
                             <div>CHEPKOLON</div>
                             <div>PREMIER SCHOOL</div>
-                            <div>MJINI</div>
+                            <div>- MJINI</div>
                         </div>
-                        <Link href='/comingsoon'>
+                        <Link href='/premier/welcome'>
                             <a target='_blank'></a>
                         </Link>
                     </div>

@@ -27,11 +27,11 @@ function Footer() {
                       <a className={styles.HpPromosLink}>Latest News</a>
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link href="/cgha/admissions">
                       <a className={styles.HpPromosLink}>Boarding</a>
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
             </div>
             <div className={styles.FooterCol}>
@@ -40,8 +40,8 @@ function Footer() {
               <div className={styles.FooterAddressWrapper}>
                 <address>
                   <h3 className={styles.FooterHeading}>address</h3>
-                  <p>Chepkolon Green Highlands Academy, Kisumu Road,&nbsp;</p>
-                  <p>Kericho</p>
+                  <p>Chepkolon Premier School - Mjini&nbsp;</p>
+                  <p>Kericho Town</p>
                 </address>
                 <a className={styles.FooterDirections} title="see chepkolon green highlands directions" aria-label="see chepkolon green highlands directions" target='_blank'>
                   <i></i>
@@ -51,7 +51,7 @@ function Footer() {
                   <h3 className={styles.FooterHeading}>telephone</h3>
                   <p>
                     <a className={styles.GhLeftLine} href="tel:0718003567" title="call" aria-label="phone-number">
-                      0718003567
+                      0724555699
                     </a>
                   </p>
                 </div>

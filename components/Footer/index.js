@@ -71,7 +71,7 @@ const Footer = () => {
                         <span></span>
                         Kericho,
                         <span></span>
-                        Nyagacho
+                        Chepkolon
                     </h3>
                     <h4>Telephone</h4>
                     <a className={styles.Tel} href="tel: 0718003567" title="0718003567">0718003567</a>
@@ -84,10 +84,10 @@ const Footer = () => {
                         <span></span>
                         Kericho
                         <span></span>
-                        Nyagacho
+                        Town
                     </h3>
                     <h4>Telephone</h4>
-                    <a className={styles.Tel} href="tel: 0718003567" title="0718003567">0718003567</a>
+                    <a className={styles.Tel} href="tel: 0718003567" title="0718003567">0724555699</a>
                     <a className={styles.Email} href="tel: 0718003567" title="0718003567">Contact</a>
                 </div>
             </div>

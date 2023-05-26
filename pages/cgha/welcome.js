@@ -152,13 +152,33 @@ const items = [
     }
 ];
 
+const CarouselItems = [
+    {
+      src: require("../../assets/assembly.jpg"),
+      alt: "Here it is",
+      caption: "Here it is"
+    },
+    {
+      src: require("../../assets/class2.jpg"),
+      alt: "Somewhere",
+      caption: "Somewhere"
+    },
+    {
+      src: require("../../assets/class.jpg"),
+      alt: "Here it is",
+      caption: "Here it is"
+    }
+  ];
+
+  const welcomeText = 'Chepkolon Green Highlands Academy is a mixed gender day and boarding Primary School in Kericho.'
 export default function GreenHighlands() {
+
     const [openTab, setOpenTab] = React.useState(1);
     return (
         <>
         <section className={styles.Carousel}>
             <div className="">
-                <WelcomeCarousel />
+                <WelcomeCarousel items={CarouselItems} welcomeText = {welcomeText}/>
             </div>
         </section>
         <section className={styles.Welcome}>
