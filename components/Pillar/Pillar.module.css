@@ -1,0 +1,200 @@
+.PillarContainer {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    position: relative;
+    background-color: #ffffff;
+    z-index: 2;
+}
+
+.BackgroundOverlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.PillarInner {
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    max-width: 1140px;
+}
+
+.PillarRow {
+    width: 100%;
+    display: flex;
+}
+
+.PillarColumn {
+    position: relative;
+    min-height: 1px;
+    display: flex;
+}
+
+.TextAbove {
+    z-index: 2;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    margin: 10% 0% 10% 0%;
+    --e-column-margin-right: 0%;
+    --e-column-margin-left: 0%;
+}
+
+.ColumnWrapper {
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.TextColumnWrapper {
+    background-color: #EFEFEF;
+}
+
+.TextColumnWrap {
+    display: flex;
+    padding: 6% 4% 6% 4%;
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.TextColumnWrap:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.PillarHeading {
+    width: 100%;
+    margin-bottom: 20px;
+}
+  
+.HeadingWrap h2{
+    color: #000000;
+    font-family: "Montserrat", Sans-serif;
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: -1.1px;
+}
+
+.PillarsText {
+    width: 100%;
+}
+
+.HeadingWrap p {
+    color: #2D2D2D;
+    font-family: "Montserrat", Sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.8em;
+}
+
+@media screen and (min-width: 767px) {
+    .Col50 {
+        width: 50%
+    }
+}
+
+.ImageColumnWrapperOverlay {
+    /* background-image: url(../../assets/assembly.jpg); */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+    height: 100%;
+    /* width: 100%; */
+    top: 0;
+    /* left: 0; */
+    position: absolute;
+    width: 130%;
+}
+
+.ImageLeft {
+    left: -30%;
+}
+
+.ImageWrap {
+    display: flex;
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding: 10px;
+}
+
+.Spacer {
+    width: 100%
+}
+
+.SpacerInner {
+    height: 50px;
+}
+
+@media screen and (max-width: 1024px) {
+    .PillarInner {
+        max-width: 1024px;
+    }
+
+    .PillarRow {
+        flex-wrap: wrap;
+    }
+
+    .HeadingWrap h2{
+        font-size: 30px;
+    }
+
+    .PillarContainer{
+        padding: 0px 20px 60px 20px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+   .PillarInner {
+    max-width: 767px;
+   }
+
+
+
+    .TextColumnWrapper {
+        margin: 0px 0px 0px 0px;
+        --e-column-margin-right: 0px;
+        --e-column-margin-left: 0px;
+    }
+
+    .TextColumnWrap {
+        padding: 30px 20px 30px 20px;
+    }
+
+    .PillarsText {
+        text-align: left;
+    }
+
+    .ImageWrap {
+        padding: 30% 0% 30% 0%;
+    }
+
+    .PillarRow {
+        flex-direction: column;
+    }
+
+    .TextAbove {
+        order: 10
+    }
+
+    .TextBelow {
+        order: 9
+    }
+
+    .PillarColumn {
+        width: 100%;
+    }
+
+    .TextAbove {
+        margin: 0 0 0 0;
+    }
+
+    .ImageColumnWrapperOverlay {
+        width: 100%;
+        left: 0;
+    }
+}

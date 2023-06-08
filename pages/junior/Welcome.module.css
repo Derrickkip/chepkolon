@@ -7,7 +7,7 @@
     clear: both;
   }
 
-.SlHero {
+.HeroImageArea {
     background: #006974;
     height: 100%;
     left: 0;
@@ -18,14 +18,7 @@
     z-index: 1;
 }
 
-.HeroImagesArea {
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    z-index: 2;
-}
-
-.SlHero:after, .SlHero:before {
+.HeroImageArea:after, .HeroImageArea:before {
     content: "";
     left: 0;
     opacity: 0;
@@ -39,7 +32,14 @@
     z-index: 3;
 }
 
-.SlHero:before {
+.HeroImagesArea {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+
+.HeroImageArea:before {
     background: -webkit-linear-gradient(top,rgba(0,0,0,.66),rgba(0,0,0,.44) 42%,rgba(0,0,0,.13) 80%,rgba(0,0,0,.01));
     background: -o-linear-gradient(top,rgba(0,0,0,.66) 0,rgba(0,0,0,.44) 42%,rgba(0,0,0,.13) 80%,rgba(0,0,0,.01) 100%);
     background: -ms-linear-gradient(top,rgba(0,0,0,.66) 0,rgba(0,0,0,.44) 42%,rgba(0,0,0,.13) 80%,rgba(0,0,0,.01) 100%);
@@ -50,7 +50,7 @@
     top: 0;
 }
 
-.SlHero:after {
+.HeroImageArea:after {
     background: -moz-linear-gradient(top,transparent 0,rgba(0,0,0,.9) 100%);
     background: -webkit-linear-gradient(top,transparent,rgba(0,0,0,.9));
     background: -webkit-gradient(linear,left top,left bottom,from(transparent),to(rgba(0,0,0,.9)));
@@ -61,12 +61,12 @@
     height: 150px;
 }
 
-.SlHeroInner {
+.HeroImagesAreaInner {
     height: 100%;
     position: relative;
 }
 
-.SlHeroInner div {
+.HeroImagesAreaInner div {
     height: 100%;
     left: 0;
     overflow: hidden;
@@ -78,7 +78,7 @@
 .SlHeroInner div span {
     display: block;
     height: auto !important;
-    opacity: 0;
+    opacity: 1;
     position: relative !important;
     -o-transition: opacity .3s ease;
     -moz-transition: opacity .3s ease;
@@ -146,3 +146,493 @@
     padding: 0;
     text-transform: uppercase;
 }
+
+  
+  .SecondLvlCss h2 {
+    color: #00730f;
+    font-family: Lato, sans-serif;
+    font-weight: 300;
+    margin: 35px 0 15px;
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 30px;
+    line-height: 40px;
+  }
+  
+  .SecondLvlCss ul {
+    display: block;
+    list-style-type: none;
+    margin: 20px 0;
+    padding: 0;
+    position: relative;
+  }
+  
+  .SecondLvlCss ul li {
+    padding: 12px 0 12px 25px;
+    position: relative;
+  }
+  
+  .SecondLvlCss ul li:before {
+    background: #00730f;
+    border-radius: 100%;
+    content: "";
+    display: block;
+    height: 8px;
+    left: 0;
+    position: absolute;
+    top: 22px;
+    width: 8px;
+  }
+  
+  .SlContentMain {
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .SlContentArea .SlContentMain {
+    background: #fff;
+    box-shadow: 0 0 15px 4px rgb(3 3 3 / 10%);
+    margin: 25px auto 0;
+    width: 100%;
+  }
+  
+  .SlContentArea .SlContentMain .SlContentRight {
+    background: #fff;
+    box-sizing: border-box;
+    float: left;
+    padding: 60px 50px 40px;
+    position: relative;
+    width: 69.94%;
+    z-index: 2;
+  }
+  
+  /* .SlContentArea .SlContentMain .SlContentRight:before {
+    background: #e4f3f5;
+    content: "";
+    display: block;
+    height: 100%;
+    left: -290px;
+    position: absolute;
+    top: 0;
+    width: 290px;
+    z-index: 1;
+  } */
+  
+  .SecondLvlCss>p.FeaturedParagraph {
+    color: #00730f;
+    font-family: Lato, sans-serif;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 34px;
+    margin: 0 0 40px;
+    padding-bottom: 28px;
+    position: relative;
+  }
+  
+  .SecondLvlCss>p {
+    margin: 15px 0;
+    word-break: normal;
+    word-wrap: normal;
+    color: #2D2D2D;
+    font-family: "Montserrat", Sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.8em;
+  }
+
+  .SecondLvlCss div span {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  
+  .HeroImagesAreaInner div span {
+    min-width: 100%;
+    min-height: 100%;
+  }
+  
+  .SecondLvlCss img {
+    box-shadow: 0 2px 35px 5px rgb(3 3 3 / 40%);
+    display: block;
+    height: auto;
+    margin: 30px 0;
+    position: relative;
+    width: 100%;
+  }
+  
+  .SlContentArea .SlContentMain .SlContentLeft {
+    background: #e8f5e4;
+    float: left;
+    padding: 53px 30px 60px;
+    width: 290px;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    margin-top: -120px;
+    margin-bottom: 0px;
+    /* padding: 0px 0px 0px 0px; */
+  }
+  
+  .InThisSection {
+    color: #00730f;
+    font-family: Lato, sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 40px;
+    margin-bottom: 15px;
+    position: relative;
+    text-transform: uppercase;
+    z-index: 2;
+  }
+  
+  ul.MkTreeMenu {
+    clear: both;
+    font-family: Lato, sans-serif;
+    list-style-type: none;
+    margin: 0 0 35px;
+    padding: 0;
+    position: relative;
+  }
+  
+  ul.MkTreeMenu li {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+  }
+  
+  ul.MkTreeMenu li a:visited {
+    color: #00730f;
+    text-decoration: none;
+  }
+  
+  ul.MkTreeMenu li a:hover {
+    opacity: 0.7;
+  }
+  
+  ul.MkTreeMenu li a {
+    word-wrap: break-word;
+    display: block;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 21px;
+    outline: 0;
+    padding: 8px 40px 8px 0;
+    position: relative;
+    text-transform: capitalize;
+    transition: all .3s ease;
+    z-index: 1;
+  }
+
+  .Welcome {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+    background-image: url(../../assets/backbanner.png) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+  }
+
+  .Container {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .Row {
+    --bs-gutter-x: 30px;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x) / -2);
+    margin-left: calc(var(--bs-gutter-x) / -2);
+}
+
+.Row > * {
+  flex-shrink: 0;
+  /* width: 100%; */
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) / 2);
+  padding-left: calc(var(--bs-gutter-x) / 2);
+  margin-top: var(--bs-gutter-y);
+}
+
+.Column {
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+.Column>.ColumnInner {
+  box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+}
+
+.ColumnInner h2 {
+  color: #000000;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  letter-spacing: -1.1px;
+  text-align: left;
+}
+
+.WhiteBoxShadow {
+  background: #fff !important;
+  padding: 2rem 2rem !important;
+  box-shadow: 0 0 37px -4px rgb(0 0 0 / 10%) !important;
+}
+
+.WhiteBoxShadow > span {
+  width: 100%;
+  border: none;
+  padding: 0;
+  margin: 0;
+  min-height: inherit;
+  object-fit: cover;
+  transition: transform 0.5s, opacity 0.5s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.VisionSection {
+  background-color: #EFEFEF !important;
+  /* transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s; */
+  /* margin-top: 40px; */
+  margin-bottom: 0px;
+  padding: 40px 0px;
+  position: relative;
+  z-index: 2;
+}
+
+.MyContainer{
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  max-width: 1077px;
+}
+
+.WidgetWrap {
+  position: relative;
+  width: 100%;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.Element {
+  text-align: center;
+}
+
+.Element span {
+    width: 85px !important;
+    opacity: 1;
+}
+
+.Divider {
+  width: 50px;
+  margin: 0 auto;
+  text-align: center;
+  border-top: 1.8px solid #cccccc;
+}
+
+.WidgetContainer {
+  margin: 0px 0px 0px 0px;
+  padding: 20px 0px 0px 0px;
+}
+
+.WidgetContainer h5 {
+    color: var( --e-global-color-text );
+    font-family: "Montserrat", Sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 26px;
+    letter-spacing: 1.6px;
+}
+
+.TextWidgetContainer {
+    margin: 0px 0px 0px 0px;
+    padding: 25px 0px 25px 0px;
+}
+
+.TextWidgetContainer h3 {
+    color: #234265;
+    font-family: "Montserrat", Sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.4em;
+}
+
+.Pillars {
+  background-color: #ffffff;
+  /* margin-top: 40px; */
+  /* margin-bottom: 40px; */
+  padding: 40px 20px 0px 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.PillarColumn {
+    position: relative;
+    min-height: 1px;
+    display: flex;
+    /* position: relative; */
+    width: 100%;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.HeadingTitle {
+  color: #000000;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  letter-spacing: -1.1px;
+}
+
+.PillarTitle {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.PillarText p {
+  --e-global-color-primary: #052C5A;
+  --e-global-color-secondary: #234265;
+  --e-global-color-text: #2D2D2D;
+  --e-global-color-accent: #61CE70;
+  --e-global-typography-primary-font-family: "Montserrat";
+  --e-global-typography-primary-font-size: 60px;
+  --e-global-typography-primary-font-weight: 600;
+  --e-global-typography-primary-letter-spacing: -1.1px;
+  --e-global-typography-secondary-font-family: "Montserrat";
+  --e-global-typography-secondary-font-size: 40px;
+  --e-global-typography-secondary-font-weight: 600;
+  --e-global-typography-secondary-letter-spacing: -1.1px;
+  --e-global-typography-text-font-family: "Source Sans Pro";
+  --e-global-typography-text-font-weight: 400;
+  --e-global-typography-accent-font-family: "Roboto";
+  --e-global-typography-accent-font-weight: 500;
+  color: #2d2d2d;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.8em;
+}
+
+.PillarContainer {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    position: relative;
+    background-color: #ffffff;
+    z-index: 2;
+}
+
+
+.TextColumn {
+  z-index: 2;
+  position: relative;
+  min-height: 1px;
+  display: flex;
+}
+
+.TextColumnWrapper {
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    margin: 10% 0% 10% 0%;
+    --e-column-margin-right: 0%;
+    --e-column-margin-left: 0%;
+    background-color: #EFEFEF;
+}
+
+
+
+.ImageColumn {
+  position: relative;
+  min-height: 1px;
+  display: flex;
+}
+
+.ImageColumnWrapper {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.ImageColumnWrapperOverlay {
+    background-image: url(../../assets/assembly.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+    height: 100%;
+    /* width: 100%; */
+    top: 0;
+    /* left: 0; */
+    position: absolute;
+    width: 130%;
+    left: -30%;
+}
+
+@media screen and (min-width: 767px) {
+  .TextColumn, .ImageColumn {
+    width: 50%;
+  }
+
+
+}
+
+  @media screen and (max-width: 1170px) {
+
+    .Container {
+      /* width: 1170px; */
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+
+    .Container {
+      /* width: 970px; */
+    }
+  }
+
+@media screen and (max-width: 767px) {
+  .PageTitle {
+    padding: 0 30px;
+    width: auto;
+}
+
+.SecondLvlCss h1 {
+  font-size: 25px;
+  line-height: 32px;
+}
+
+.Container {
+  /* width: 600px; */
+  padding: 0 20px 0 20px;
+}
+
+.Column {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.TextColumn, .ImageColumn {
+  width: 100%;
+}
+
+.ImageSection {
+  order: 9;
+}
+
+.TextSection {
+  order: 10;
+}
+
+.Column>.ColumnInner {
+  padding: 0;
+}
+
+.MyContainer {
+    padding: 0px 20px 40px 20px;
+}
+}
+  

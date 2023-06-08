@@ -72,9 +72,9 @@ const Schools = () => {
                         <div className={styles.LinkInfo}>
                             <div>CHEPKOLON</div>
                             <div>JUNIOUR</div>
-                            <div>HIGH SCHOOL</div>
+                            <div>Secondary SCHOOL</div>
                         </div>
-                        <Link href='/comingsoon'>
+                        <Link href='/junior'>
                             <a target='_blank'></a>
                         </Link>
                     </div>
