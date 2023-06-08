@@ -217,7 +217,7 @@ address {
   overflow: hidden;
   /* position: absolute; */
   top: 0;
-  width: 100%;
+  width: 100% !important;
 }
 
 .hero-images-area > span {
@@ -530,6 +530,10 @@ address {
   position: absolute;
   right: 0;
   top: 0;
+}
+
+.carousel-item span {
+  width: 100% !important;
 }
 
 .homeBtn:after {

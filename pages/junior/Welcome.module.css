@@ -241,6 +241,11 @@
     line-height: 1.8em;
   }
 
+  .SecondLvlCss>p>strong {
+    color:#000000;
+    font-weight: 600;
+  }
+
   .SecondLvlCss div span {
     width: 100% !important;
     height: 100% !important;
